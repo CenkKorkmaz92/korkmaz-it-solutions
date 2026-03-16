@@ -9,18 +9,19 @@ export default function ServicesSection() {
   const headerRef = useReveal();
   const gridRef = useReveal();
   return (
-    <section id="services" aria-label="Services" className="bg-secondary">
+    <section id="services" aria-label="Services" className="relative bg-surface overflow-hidden fade-to-primary">
+      <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
       <Container>
-        <div className="py-24 sm:py-32">
+        <div className="relative z-10 py-24 sm:py-32">
           {/* Header */}
           <div ref={headerRef} className="reveal max-w-2xl mb-10 sm:mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
               {t.services.eyebrow}
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
               {t.services.heading}
             </h2>
-            <p className="mt-4 text-base text-primary/60 leading-relaxed">
+            <p className="mt-4 text-base text-secondary/50 leading-relaxed">
               {t.services.sub}
             </p>
           </div>
@@ -30,13 +31,13 @@ export default function ServicesSection() {
             {t.services.items.map((service, i) => (
               <li
                 key={service.title}
-                className="flex flex-col gap-4 rounded-xl border border-primary/8 bg-white p-7 shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-accent/20 transition-all duration-200 ease-out"
+                className="cyber-card cyber-bracket flex flex-col gap-4 rounded-xl p-7 hover:-translate-y-1 transition-all duration-200 ease-out"
                 style={{ "--delay": `${i * 80}ms` } as React.CSSProperties}
               >
-                <h3 className="text-base font-semibold text-primary">
+                <h3 className="text-base font-semibold text-secondary">
                   {service.title}
                 </h3>
-                <p className="text-sm text-primary/60 leading-relaxed">
+                <p className="text-sm text-secondary/50 leading-relaxed">
                   {service.description}
                 </p>
               </li>

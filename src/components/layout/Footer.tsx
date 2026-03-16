@@ -20,25 +20,26 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary text-secondary">
+    <footer className="relative bg-surface text-secondary overflow-hidden">
+      <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <Container>
-        <div className="py-14 sm:py-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="relative z-10 py-14 sm:py-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <Link
               href="/"
-              className="text-base font-semibold tracking-tight hover:text-accent transition-colors link-underline w-fit"
+              className="text-base font-semibold tracking-tight text-accent hover:text-accent/80 transition-colors glow-text w-fit"
             >
               Korkmaz IT Solutions
             </Link>
-            <p className="text-sm text-secondary/60 leading-relaxed max-w-xs">
+            <p className="text-sm text-secondary/50 leading-relaxed max-w-xs">
               {t.footer.tagline}
             </p>
           </div>
 
           {/* Navigation */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-secondary/40">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-accent/50">
               {t.footer.navigation}
             </h3>
             <ul className="flex flex-col gap-2">
@@ -46,7 +47,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-secondary/60 hover:text-secondary transition-colors link-underline"
+                    className="text-sm text-secondary/50 hover:text-accent transition-colors link-underline"
                   >
                     {link.label}
                   </Link>
@@ -57,12 +58,12 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-secondary/40">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-accent/50">
               {t.footer.contact}
             </h3>
             <a
               href="mailto:info@korkmaz-it-solutions.com"
-              className="text-sm text-secondary/60 hover:text-accent transition-colors"
+              className="text-sm text-secondary/50 hover:text-accent transition-colors"
             >
               info@korkmaz-it-solutions.com
             </a>
@@ -71,7 +72,7 @@ export default function Footer() {
                 href="https://github.com/CenkKorkmaz92"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-secondary/60 hover:text-accent transition-colors"
+                className="text-sm text-secondary/50 hover:text-accent transition-colors"
               >
                 GitHub
               </a>
@@ -79,7 +80,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/cenk-korkmaz-2731072a5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-secondary/60 hover:text-accent transition-colors"
+                className="text-sm text-secondary/50 hover:text-accent transition-colors"
               >
                 LinkedIn
               </a>
@@ -88,8 +89,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-secondary/10 py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-secondary/40">
+        <div className="relative z-10 border-t border-accent/10 py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-secondary/30">
             &copy; {currentYear} Korkmaz IT Solutions. {t.footer.rights}
           </p>
           <ul className="flex items-center gap-4">
@@ -97,7 +98,7 @@ export default function Footer() {
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="text-xs text-secondary/40 hover:text-secondary transition-colors"
+                  className="text-xs text-secondary/30 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </Link>

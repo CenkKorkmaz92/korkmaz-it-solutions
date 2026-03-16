@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import { useState, useEffect } from "react";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
@@ -8,19 +9,29 @@ export default function ProcessSection() {
   const t = useTranslation();
   const headerRef = useReveal();
   const stepsRef = useReveal();
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep(prev => (prev + 1) % 3);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="process" aria-label="Process" className="bg-secondary">
+    <section id="process" aria-label="Process" className="relative bg-surface overflow-hidden fade-to-primary">
+      <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
       <Container>
-        <div className="py-24 sm:py-32">
+        <div className="relative z-10 py-24 sm:py-32">
           {/* Header */}
           <div ref={headerRef} className="reveal max-w-2xl mb-10 sm:mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
               {t.process.eyebrow}
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
               {t.process.heading}
             </h2>
-            <p className="mt-4 text-base text-primary/60 leading-relaxed">
+            <p className="mt-4 text-base text-secondary/50 leading-relaxed">
               {t.process.sub}
             </p>
           </div>
@@ -33,15 +44,25 @@ export default function ProcessSection() {
                 className="flex flex-col gap-5"
                 style={{ "--delay": `${i * 120}ms` } as React.CSSProperties}
               >
-                <span className="text-5xl font-bold text-accent/20 leading-none select-none">
+                <span
+                  className={activeStep === i ? "cyber-step-num leading-none" : "leading-none"}
+                  style={{
+                    fontFamily: "var(--font-black-ops)",
+                    fontSize: "5rem",
+                    ...(activeStep !== i && {
+                      color: "rgba(0,212,255,0.2)",
+                      transition: "color 400ms ease",
+                    }),
+                  }}
+                >
                   {number}
                 </span>
-                <div className="h-px w-12 bg-accent/40" aria-hidden="true" />
+                <div className="h-px w-12 bg-accent/40" style={{ boxShadow: "0 0 8px rgba(0,212,255,0.4)" }} aria-hidden="true" />
                 <div>
-                  <h3 className="text-base font-semibold text-primary mb-2">
+                  <h3 className="text-base font-semibold text-secondary mb-2">
                     {title}
                   </h3>
-                  <p className="text-sm text-primary/60 leading-relaxed">
+                  <p className="text-sm text-secondary/50 leading-relaxed">
                     {description}
                   </p>
                 </div>

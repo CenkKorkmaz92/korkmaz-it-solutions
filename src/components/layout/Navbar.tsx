@@ -53,7 +53,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-primary border-b border-secondary/10">
+    <header className="sticky top-0 z-50 bg-primary/90 backdrop-blur-md border-b border-accent/10" style={{ boxShadow: "0 1px 20px rgba(0,212,255,0.06)" }}>
       <Container>
         <nav
           className="flex items-center justify-between h-16"
