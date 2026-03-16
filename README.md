@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Korkmaz IT Solutions — Official Website
 
-## Getting Started
+> The official company website for **Korkmaz IT Solutions**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About the Company
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Korkmaz IT Solutions is a professional IT services and software development company delivering modern, scalable, and reliable digital solutions to businesses. Our expertise spans web development, software engineering, and IT consulting — helping clients transform their digital presence and operations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Purpose
 
-## Learn More
+This repository contains the source code for the official Korkmaz IT Solutions website. The website serves as the company's primary online presence, showcasing our services, expertise, and contact information to clients and partners.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Technology | Role |
+|---|---|
+| [Next.js 16](https://nextjs.org/) | React framework (App Router) |
+| [React 19](https://react.dev/) | UI library |
+| [TypeScript](https://www.typescriptlang.org/) | Type-safe development |
+| [Tailwind CSS 4](https://tailwindcss.com/) | Utility-first styling |
+| [ESLint](https://eslint.org/) | Code quality & linting |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **App Router** — file-based routing with server and client components
+- **Fully responsive** — optimised for all screen sizes and devices
+- **Performance-first** — static generation and server-side rendering where appropriate
+- **SEO optimised** — metadata API, Open Graph tags, and semantic HTML throughout
+- **Accessible** — built to WCAG standards with semantic markup and keyboard navigation
+- **Type-safe** — end-to-end TypeScript across all components, hooks, and utilities
+
+---
+
+## Live Website
+
+[www.korkmaz-it-solutions.com](https://www.korkmaz-it-solutions.com)
+
+---
+
+## Author
+
+**Korkmaz IT Solutions**  
+Professional IT Services & Software Development  
+[www.korkmaz-it-solutions.com](https://www.korkmaz-it-solutions.com)
+
+---
+
+## Copyright
+
+© 2026 Korkmaz IT Solutions. All rights reserved.
+
+The source code, design, and all associated assets in this repository are the exclusive property of Korkmaz IT Solutions. Unauthorised copying, modification, distribution, or use of any part of this codebase — in whole or in part — is strictly prohibited without prior written permission from Korkmaz IT Solutions.
+
