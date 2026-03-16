@@ -1,54 +1,37 @@
-import Container from "@/components/layout/Container";
+﻿"use client";
 
-const services = [
-  {
-    title: "Web Development",
-    description:
-      "Custom web applications built with modern frameworks. From landing pages to complex platforms — fast, accessible and built to scale.",
-  },
-  {
-    title: "IT Consulting",
-    description:
-      "Strategic guidance on technology decisions, architecture and digital transformation. We help you choose the right tools and build the right systems.",
-  },
-  {
-    title: "Automation Solutions",
-    description:
-      "Eliminate repetitive workflows with tailored automation. We build integrations and internal tools that save time and reduce operational overhead.",
-  },
-  {
-    title: "Hosting & Deployment",
-    description:
-      "Reliable, secure deployment pipelines and cloud infrastructure. We handle CI/CD, server configuration and monitoring so you can focus on your product.",
-  },
-];
+import Container from "@/components/layout/Container";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function ServicesSection() {
+  const t = useTranslation();
+  const headerRef = useReveal();
+  const gridRef = useReveal();
   return (
     <section id="services" aria-label="Services" className="bg-secondary">
       <Container>
         <div className="py-24 sm:py-32">
           {/* Header */}
-          <div className="max-w-2xl mb-10 sm:mb-14">
+          <div ref={headerRef} className="reveal max-w-2xl mb-10 sm:mb-14">
             <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
-              What We Offer
+              {t.services.eyebrow}
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-              Services Built Around Your Business
+              {t.services.heading}
             </h2>
             <p className="mt-4 text-base text-primary/60 leading-relaxed">
-              We deliver focused, high-quality IT services — no unnecessary
-              complexity, no bloated scope. Just the right solution for your
-              needs.
+              {t.services.sub}
             </p>
           </div>
 
           {/* Service cards */}
-          <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
+          <ul ref={gridRef} className="reveal grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {t.services.items.map((service, i) => (
               <li
                 key={service.title}
-                className="flex flex-col gap-4 rounded-xl border border-primary/8 bg-white p-7 shadow-sm"
+                className="flex flex-col gap-4 rounded-xl border border-primary/8 bg-white p-7 shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-accent/20 transition-all duration-200 ease-out"
+                style={{ "--delay": `${i * 80}ms` } as React.CSSProperties}
               >
                 <h3 className="text-base font-semibold text-primary">
                   {service.title}
@@ -64,4 +47,3 @@ export default function ServicesSection() {
     </section>
   );
 }
-

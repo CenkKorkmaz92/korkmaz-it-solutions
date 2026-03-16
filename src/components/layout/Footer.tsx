@@ -1,21 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Container from "@/components/layout/Container";
-
-const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/#services" },
-  { label: "Projects", href: "/#projects" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
-];
-
-const legalLinks = [
-  { label: "Impressum", href: "/impressum" },
-  { label: "Datenschutz", href: "/datenschutz" },
-];
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Footer() {
+  const t = useTranslation();
   const currentYear = new Date().getFullYear();
+  const legalLinks = [
+    { label: t.legal.impressumLabel, href: "/impressum" },
+    { label: t.legal.datenschutzLabel, href: "/datenschutz" },
+  ];
+  const footerLinks = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.services, href: "/#services" },
+    { label: t.nav.projects, href: "/#projects" },
+    { label: t.nav.about, href: "/#about" },
+    { label: t.nav.contact, href: "/#contact" },
+  ];
 
   return (
     <footer className="bg-primary text-secondary">
@@ -25,26 +27,26 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Link
               href="/"
-              className="text-base font-semibold tracking-tight hover:text-accent transition-colors"
+              className="text-base font-semibold tracking-tight hover:text-accent transition-colors link-underline w-fit"
             >
               Korkmaz IT Solutions
             </Link>
             <p className="text-sm text-secondary/60 leading-relaxed max-w-xs">
-              Professional IT services and software development for modern businesses.
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Navigation */}
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-secondary/40">
-              Navigation
+              {t.footer.navigation}
             </h3>
             <ul className="flex flex-col gap-2">
               {footerLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-secondary/60 hover:text-secondary transition-colors"
+                    className="text-sm text-secondary/60 hover:text-secondary transition-colors link-underline"
                   >
                     {link.label}
                   </Link>
@@ -56,7 +58,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="flex flex-col gap-4">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-secondary/40">
-              Contact
+              {t.footer.contact}
             </h3>
             <a
               href="mailto:info@korkmaz-it-solutions.com"
@@ -88,7 +90,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-secondary/10 py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-secondary/40">
-            &copy; {currentYear} Korkmaz IT Solutions. All rights reserved.
+            &copy; {currentYear} Korkmaz IT Solutions. {t.footer.rights}
           </p>
           <ul className="flex items-center gap-4">
             {legalLinks.map((link) => (

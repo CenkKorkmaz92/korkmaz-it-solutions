@@ -1,60 +1,36 @@
-import Container from "@/components/layout/Container";
+﻿"use client";
 
-const values = [
-  {
-    label: "Full-stack expertise",
-    detail:
-      "Certified in both frontend and backend development — from UI and TypeScript to server-side logic, databases and cloud infrastructure.",
-  },
-  {
-    label: "Direct collaboration",
-    detail:
-      "You work directly with the founder, not an account manager. No handoffs, no miscommunication.",
-  },
-  {
-    label: "Long-term thinking",
-    detail:
-      "We build for sustainability. The goal is software that is easy to extend, maintain and hand over.",
-  },
-];
+import Container from "@/components/layout/Container";
+import { useTranslation } from "@/hooks/useTranslation";
+import { useReveal } from "@/hooks/useReveal";
 
 export default function AboutSection() {
+  const t = useTranslation();
+  const leftRef = useReveal();
+  const rightRef = useReveal();
   return (
     <section id="about" aria-label="About" className="bg-primary">
       <Container>
         <div className="py-24 sm:py-32">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-24 lg:items-start">
-            {/* Left — text */}
-            <div>
+            {/* Left - text */}
+            <div ref={leftRef} className="reveal">
               <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
-                About
+                {t.about.eyebrow}
               </p>
               <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
-                The Person Behind the Work
+                {t.about.heading}
               </h2>
               <div className="mt-6 space-y-4 text-base text-secondary/60 leading-relaxed">
                 <p>
-                  Korkmaz IT Solutions was founded by{" "}
+                  {t.about.para1.split("Cenk Korkmaz")[0]}
                   <span className="text-secondary font-medium">
                     Cenk Korkmaz
                   </span>
-                  , a full-stack developer with certified training in both
-                  frontend and backend development — and hands-on experience
-                  delivering modern web applications and IT solutions for
-                  businesses.
+                  {t.about.para1.split("Cenk Korkmaz")[1]}
                 </p>
-                <p>
-                  The company was built on a straightforward principle: clients
-                  deserve clear communication, honest advice and software that
-                  actually solves the problem — without unnecessary complexity or
-                  inflated scope.
-                </p>
-                <p>
-                  From React and Next.js on the frontend to Python, Django,
-                  PostgreSQL and Docker on the backend — every project is handled
-                  end-to-end, with the same level of technical rigour and
-                  personal accountability.
-                </p>
+                <p>{t.about.para2}</p>
+                <p>{t.about.para3}</p>
               </div>
 
               {/* Social profiles */}
@@ -63,7 +39,7 @@ export default function AboutSection() {
                   href="https://github.com/CenkKorkmaz92"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-secondary/50 hover:text-accent transition-colors"
+                  className="text-sm font-medium text-secondary/50 hover:text-accent transition-colors link-underline"
                 >
                   GitHub
                 </a>
@@ -71,17 +47,21 @@ export default function AboutSection() {
                   href="https://www.linkedin.com/in/cenk-korkmaz-2731072a5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-secondary/50 hover:text-accent transition-colors"
+                  className="text-sm font-medium text-secondary/50 hover:text-accent transition-colors link-underline"
                 >
                   LinkedIn
                 </a>
               </div>
             </div>
 
-            {/* Right — values */}
-            <div className="flex flex-col gap-8">
-              {values.map(({ label, detail }) => (
-                <div key={label} className="flex gap-5">
+            {/* Right - values */}
+            <div ref={rightRef} className="reveal flex flex-col gap-5">
+              {t.about.values.map(({ label, detail }, i) => (
+                <div
+                  key={label}
+                  className="flex gap-5 rounded-xl border border-secondary/10 bg-secondary/5 p-5"
+                  style={{ "--delay": `${i * 80}ms` } as React.CSSProperties}
+                >
                   <span
                     className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-accent"
                     aria-hidden="true"
@@ -103,4 +83,3 @@ export default function AboutSection() {
     </section>
   );
 }
-
