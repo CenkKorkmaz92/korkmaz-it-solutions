@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 /* ─── Design Tokens ──────────────────────────────────────────────────────────
-   60 / 30 / 10 color rule:
-   Primary   (60%) — #0f172a  — main text, navigation, structure
-   Secondary (30%) — #f8fafc  — section backgrounds, layout separation
-   Accent    (10%) — #06b6d4  — CTA buttons, highlights, interactive elements
+   Cyber / High-Tech palette inspired by K[IT]S logo
+   Primary   (60%) — #080c18  — deep navy, main bg
+   Secondary (30%) — #e8f4ff  — light text, layout
+   Accent    (10%) — #00d4ff  — electric cyan, glows, CTAs
 ──────────────────────────────────────────────────────────────────────────── */
 :root {
-  --color-primary:   #0f172a;
-  --color-secondary: #f8fafc;
-  --color-accent:    #06b6d4;
+  --color-primary:   #080c18;
+  --color-secondary: #e8f4ff;
+  --color-accent:    #00d4ff;
+  --color-accent-dim: #0090b8;
+  --color-surface:   #0d1527;
+  --glow-accent: 0 0 12px rgba(0, 212, 255, 0.5), 0 0 32px rgba(0, 212, 255, 0.2);
 }
 
 @theme inline {
@@ -17,15 +20,22 @@
   --color-primary:   var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent:    var(--color-accent);
+  --color-surface:   var(--color-surface);
 
   /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-black-ops: var(--font-black-ops);
+}
+
+::selection {
+  background-color: rgba(0, 212, 255, 0.25);
+  color: #e8f4ff;
 }
 
 body {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 /* Offset anchor links to account for the sticky navbar (h-16 = 4rem) */
@@ -117,6 +127,183 @@ html {
   display: block;
   height: 2px;
   width: 0;
-  background: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+  box-shadow: var(--glow-accent);
   animation: accent-grow 600ms 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ─── Cyber / High-Tech Effects ──────────────────────────────────────────── */
+
+/* Dot-grid background pattern */
+.cyber-grid {
+  background-image:
+    radial-gradient(circle, rgba(0, 212, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glowing accent text */
+.glow-text {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.7), 0 0 24px rgba(0, 212, 255, 0.3);
+}
+
+/* Glowing border */
+.glow-border {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.3), inset 0 0 8px rgba(0, 212, 255, 0.05);
+}
+
+/* Cyber card */
+.cyber-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(0, 144, 184, 0.02));
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  transition: border-color 300ms, box-shadow 300ms;
+  overflow: hidden;
+}
+.cyber-card:hover {
+  border-color: transparent;
+  box-shadow: 0 0 28px rgba(0, 212, 255, 0.08);
+}
+
+/* Two energy lights traveling around the border on hover */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes border-travel {
+  to { --border-angle: 360deg; }
+}
+.cyber-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0deg,
+    transparent 68deg,
+    rgba(0, 212, 255, 0.5) 83deg,
+    rgba(255, 255, 255, 0.95) 90deg,
+    rgba(0, 212, 255, 0.5) 97deg,
+    transparent 112deg,
+    transparent 248deg,
+    rgba(0, 212, 255, 0.5) 263deg,
+    rgba(255, 255, 255, 0.95) 270deg,
+    rgba(0, 212, 255, 0.5) 277deg,
+    transparent 292deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-travel 2.5s linear infinite paused;
+  pointer-events: none;
+  z-index: 0;
+}
+.cyber-card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Scan-line overlay (subtle, animation) */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.cyber-scanline::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset-inline: 0;
+  height: 2px;
+  background: linear-gradient(180deg, transparent, rgba(0, 212, 255, 0.06), transparent);
+  animation: scanline 6s linear infinite;
+  z-index: 1;
+}
+
+/* Animated corner brackets */
+.cyber-bracket {
+  position: relative;
+}
+.cyber-bracket::before,
+.cyber-bracket::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--color-accent);
+  border-style: solid;
+  opacity: 0.6;
+}
+.cyber-bracket::before {
+  top: 0; left: 0;
+  border-width: 1px 0 0 1px;
+}
+.cyber-bracket::after {
+  bottom: 0; right: 0;
+  border-width: 0 1px 1px 0;
+}
+
+/* Pulsing glow button */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.15); }
+  50%       { box-shadow: 0 0 16px rgba(0, 212, 255, 0.7), 0 0 40px rgba(0, 212, 255, 0.3); }
+}
+.btn-cyber {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Cyber chip background slow rotation + breathe */
+@keyframes chip-breathe {
+  0%, 100% { opacity: 0.18; transform: rotate(0deg) scale(1); }
+  50%       { opacity: 0.28; transform: rotate(6deg) scale(1.04); }
+}
+.cyber-chip-bg {
+  animation: chip-breathe 8s ease-in-out infinite;
+}
+
+/* Step number — traveling light through the text fill */
+.cyber-step-num {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: conic-gradient(
+    from var(--border-angle),
+    rgba(0, 212, 255, 0.18) 0deg,
+    rgba(0, 212, 255, 0.22) 60deg,
+    rgba(0, 212, 255, 0.65) 78deg,
+    rgba(255, 255, 255, 0.95) 90deg,
+    rgba(0, 212, 255, 0.65) 102deg,
+    rgba(0, 212, 255, 0.22) 120deg,
+    rgba(0, 212, 255, 0.18) 240deg,
+    rgba(0, 212, 255, 0.65) 258deg,
+    rgba(255, 255, 255, 0.95) 270deg,
+    rgba(0, 212, 255, 0.65) 282deg,
+    rgba(0, 212, 255, 0.22) 300deg,
+    rgba(0, 212, 255, 0.18) 360deg
+  );
+  animation: border-travel 3.5s linear infinite;
+  user-select: none;
+}
+.fade-to-surface::after,
+.fade-to-primary::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  pointer-events: none;
+  z-index: 5;
+}
+.fade-to-surface::after {
+  background: linear-gradient(to bottom, transparent, #0d1527);
+}
+.fade-to-primary::after {
+  background: linear-gradient(to bottom, transparent, #080c18);
 }
