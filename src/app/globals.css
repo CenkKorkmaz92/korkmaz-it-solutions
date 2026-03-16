@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ──────────────────────────────────────────────────────────
+   60 / 30 / 10 color rule:
+   Primary   (60%) — #0f172a  — main text, navigation, structure
+   Secondary (30%) — #f8fafc  — section backgrounds, layout separation
+   Accent    (10%) — #06b6d4  — CTA buttons, highlights, interactive elements
+──────────────────────────────────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary:   #0f172a;
+  --color-secondary: #f8fafc;
+  --color-accent:    #06b6d4;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Brand palette */
+  --color-primary:   var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent:    var(--color-accent);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Offset anchor links to account for the sticky navbar (h-16 = 4rem) */
+[id] {
+  scroll-margin-top: 4rem;
 }

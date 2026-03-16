@@ -1,1 +1,18 @@
-/* Global custom styles — Tailwind base is imported via app/globals.css */
+/* ─── Design System — Korkmaz IT Solutions ───────────────────────────────────
+   Color strategy: 60 / 30 / 10 rule
+   ─────────────────────────────────────────────────────────────────────────────
+   Token              Hex       Usage
+   ─────────────────────────────────────────────────────────────────────────────
+   --color-primary    #0f172a   60% — text, navigation, structural elements
+   --color-secondary  #f8fafc   30% — section backgrounds, layout separation
+   --color-accent     #06b6d4   10% — CTA buttons, highlights, interactive
+   ─────────────────────────────────────────────────────────────────────────────
+
+   Tailwind utility classes generated:
+     bg-primary    bg-secondary    bg-accent
+     text-primary  text-secondary  text-accent
+     border-primary               border-accent
+
+   All tokens are defined in app/globals.css inside @theme inline {}.
+   Add component-level overrides below.
+──────────────────────────────────────────────────────────────────────────── */
