@@ -2,6 +2,10 @@
 
 import { useEffect } from "react";
 
+/**
+ * Suppresses the browser's native context menu on right-click and long-press
+ * (touch devices). Renders nothing — mount once at the app root.
+ */
 export default function DisableContextMenu() {
   useEffect(() => {
     const handleContextMenu = (e: MouseEvent | TouchEvent) => {

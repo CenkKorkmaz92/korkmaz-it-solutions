@@ -5,6 +5,10 @@ import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 
+/**
+ * About section — profile photo, bio paragraphs, social links, and
+ * the three value-proposition cards (Frontend–Backend, Direct contact, Clean code).
+ */
 export default function AboutSection() {
   const t = useTranslation();
   const headerRef = useReveal();

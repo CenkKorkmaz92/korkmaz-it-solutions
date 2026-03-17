@@ -4,6 +4,7 @@ import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 
+/** Services section — grid of offered service cards driven by the translations object. */
 export default function ServicesSection() {
   const t = useTranslation();
   const headerRef = useReveal();

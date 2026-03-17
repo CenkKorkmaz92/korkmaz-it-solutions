@@ -2,12 +2,19 @@
 
 import { useEffect, useRef } from "react";
 
+/** Internal representation of an active ripple animation. */
 interface Ripple {
   id: number;
   x: number;
   y: number;
 }
 
+/**
+ * Global click-ripple effect.
+ * Renders cyan concentric rings at the cursor position on every mousedown,
+ * skipping interactive elements (links, buttons, inputs, etc.).
+ * Mount once at the app root; produces no visible DOM node itself.
+ */
 export default function ClickRipple() {
   const containerRef = useRef<HTMLDivElement>(null);
   const counter = useRef(0);

@@ -1,3 +1,8 @@
+/**
+ * Animated SVG illustration of a circuit board / microchip.
+ * Used as a decorative background element in the hero section.
+ * Fully `aria-hidden`; accepts an optional `className` for sizing.
+ */
 export default function CyberChip({ className = "" }: { className?: string }) {
   return (
     <svg

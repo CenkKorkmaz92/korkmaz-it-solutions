@@ -1,5 +1,10 @@
+/** Supported language codes for the application. */
 export type Lang = "de" | "en";
 
+/**
+ * All UI translations keyed by language code.
+ * Add new languages by extending the `Lang` type and adding a matching key here.
+ */
 export const translations = {
   de: {
     nav: {
@@ -99,7 +104,7 @@ export const translations = {
         {
           label: "Direkt mit mir",
           detail:
-            "Du arbeitest mit mir, nicht mit jemandem, der mich vertritt. Was du sagst, kommt bei mir an – und umgekehrt.",
+            "Ich bin direkt erreichbar und unkompliziert. Du sagst was du brauchst – ich höre zu und setze um, was möglich ist. Kein Aufwand, kein Drumherum.",
         },
         {
           label: "Code, der bleibt",
@@ -253,7 +258,7 @@ export const translations = {
         {
           label: "Direct line to me",
           detail:
-            "You work with me, not someone who represents me. What you say reaches me directly — and the other way around.",
+            "I’m directly reachable and easy to work with. Tell me what you need — I listen and make it happen. No hassle, no runaround.",
         },
         {
           label: "Code that lasts",
@@ -310,4 +315,5 @@ export const translations = {
   },
 } as const;
 
+/** The shape of the translation object for a single language. */
 export type Translations = (typeof translations)[Lang];

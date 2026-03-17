@@ -5,6 +5,7 @@ import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 
+/** Contact CTA section — heading, sub-copy, and email / services buttons. */
 export default function ContactCtaSection() {
   const t = useTranslation();
   const ref = useReveal();

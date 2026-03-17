@@ -5,6 +5,10 @@ import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 
+/**
+ * Process section — three-step workflow (Conversation → Build → Handover).
+ * The active step number pulses with a glow animation, cycling every 3 seconds.
+ */
 export default function ProcessSection() {
   const t = useTranslation();
   const headerRef = useReveal();

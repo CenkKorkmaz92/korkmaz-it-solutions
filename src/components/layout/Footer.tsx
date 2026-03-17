@@ -6,6 +6,11 @@ import { usePathname, useRouter } from "next/navigation";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 
+/**
+ * Site footer with brand, navigation links, contact details, and legal links.
+ * Clicking the logo scrolls to the top when already on the homepage,
+ * or navigates home from inner pages.
+ */
 export default function Footer() {
   const t = useTranslation();
   const pathname = usePathname();

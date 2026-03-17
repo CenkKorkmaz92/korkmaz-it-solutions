@@ -5,12 +5,20 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 import { useEffect, useState } from "react";
 
+/**
+ * Tech stack items grouped by category.
+ * Order matches `t.techStack.categories` — [Frontend, Backend, Infrastructure].
+ */
 const techItems = [
   ["Next.js", "React", "TypeScript", "Tailwind CSS", "Angular"],
   ["Python", "Django", "Node.js", "PostgreSQL", "Redis"],
   ["Docker", "Linux", "Git", "Firebase", "Cloud"],
 ];
 
+/**
+ * Tech stack section — three columns of technology tags with an
+ * idle glow animation that pulses every few seconds.
+ */
 export default function TechStackSection() {
   const t = useTranslation();
   const headerRef = useReveal();

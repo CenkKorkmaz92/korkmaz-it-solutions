@@ -6,6 +6,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 import CyberChip from "@/components/ui/CyberChip";
 
+/** Tech stack badges shown in the hero section. */
 const techStack = [
   "Next.js",
   "React",
@@ -15,6 +16,7 @@ const techStack = [
   "PostgreSQL",
 ];
 
+/** Full-viewport hero section with headline, CTA buttons, and tech stack badges. */
 export default function HeroSection() {
   const t = useTranslation();
   const ref = useReveal(0.05);

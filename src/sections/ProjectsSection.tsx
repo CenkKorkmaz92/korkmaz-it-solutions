@@ -5,6 +5,10 @@ import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 
+/**
+ * Static metadata for each project card — GitHub/live URLs and technology tags.
+ * Order must match the `t.projects.items` array in translations.
+ */
 const projectsMeta = [
   { tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"], href: "https://github.com/CenkKorkmaz92/my_portfolio", liveHref: "https://korkmaz-it-solutions.com/projects/portfolio/", comingSoon: false },
   { tags: ["Django", "Python", "JavaScript", "Docker", "Redis"], href: "https://github.com/CenkKorkmaz92/videoflix_DA", liveHref: null, comingSoon: false },
@@ -12,6 +16,7 @@ const projectsMeta = [
   { tags: ["React", "TypeScript", "Vite", "Tailwind CSS"], href: "https://github.com/CenkKorkmaz92/mr.ink_tatto_homepage", liveHref: "https://korkmaz-it-solutions.com/projects/mr_ink_tattoo/", comingSoon: false },
 ];
 
+/** Projects section — grid of project cards with tags, GitHub and live links. */
 export default function ProjectsSection() {
   const t = useTranslation();
   const headerRef = useReveal();

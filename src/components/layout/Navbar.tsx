@@ -8,6 +8,12 @@ import Container from "@/components/layout/Container";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslation } from "@/hooks/useTranslation";
 
+/**
+ * Sticky top navigation bar.
+ * Highlights the active section via scroll tracking on the homepage,
+ * and the active route on inner pages.
+ * Includes a responsive mobile menu and a DE/EN language toggle.
+ */
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { lang, setLang } = useLanguage();

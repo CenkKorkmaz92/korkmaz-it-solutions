@@ -2,6 +2,11 @@
 
 import { useEffect, useRef } from "react";
 
+/**
+ * Soft radial glow that follows the mouse cursor with a lerp-smoothed trail.
+ * Purely decorative — `aria-hidden` and `pointer-events: none`.
+ * Mount once at the app root.
+ */
 export default function CursorGlow() {
   const glowRef = useRef<HTMLDivElement>(null);
 
