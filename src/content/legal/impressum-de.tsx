@@ -8,10 +8,10 @@ export default function ImpressumDe() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Angaben gemäß § 5 TMG
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
-          <p><Placeholder>Vollständiger Name / Unternehmensname</Placeholder></p>
-          <p><Placeholder>Straße und Hausnummer</Placeholder></p>
-          <p><Placeholder>PLZ und Ort</Placeholder></p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
+          <p>Cenk Korkmaz</p>
+          <p>Kleinhöchbergerstraße 45</p>
+          <p>71560 Sulzbach an der Murr</p>
           <p>Deutschland</p>
         </div>
       </section>
@@ -21,10 +21,10 @@ export default function ImpressumDe() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Kontakt
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Telefon:</span>{" "}
-            <Placeholder>Telefonnummer eintragen</Placeholder>
+            <a href="tel:+49015734376057" className="text-primary/70 hover:text-accent">+49 157 34376057</a>
           </p>
           <p>
             <span className="text-primary/50">E-Mail:</span>{" "}
@@ -40,25 +40,21 @@ export default function ImpressumDe() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Berufsrechtliche Regelungen
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Berufsbezeichnung:</span>{" "}
-            <Placeholder>z. B. Freiberuflicher IT-Berater / Softwareentwickler</Placeholder>
-          </p>
-          <p>
-            <span className="text-primary/50">Zuständige Kammer:</span>{" "}
-            <Placeholder>sofern zutreffend — andernfalls Abschnitt entfernen</Placeholder>
+            Freiberuflicher Softwareentwickler
           </p>
         </div>
       </section>
 
-      {/* Umsatzsteuer */}
+      {/* Steuernummer */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          Umsatzsteuer-Identifikationsnummer
+          Steuernummer
         </h2>
-        <p className="text-sm text-primary/70 leading-relaxed">
-          <Placeholder>USt-IdNr. gemäß § 27a UStG — sofern vorhanden, sonst Abschnitt entfernen</Placeholder>
+        <p className="text-base text-primary/70 leading-relaxed">
+          Die Steuernummer wird nach Erhalt vom Finanzamt hier angezeigt.
         </p>
       </section>
 
@@ -67,9 +63,10 @@ export default function ImpressumDe() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
-          <p><Placeholder>Name der verantwortlichen Person</Placeholder></p>
-          <p><Placeholder>Anschrift — sofern abweichend von oben</Placeholder></p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
+          <p>Cenk Korkmaz</p>
+          <p>Kleinhöchbergerstraße 45</p>
+          <p>71560 Sulzbach an der Murr</p>
         </div>
       </section>
 
@@ -80,8 +77,8 @@ export default function ImpressumDe() {
         </h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-2">Haftung für Inhalte</h3>
-            <p className="text-sm text-primary/70 leading-relaxed">
+            <h3 className="text-base font-semibold text-primary mb-2">Haftung für Inhalte</h3>
+            <p className="text-base text-primary/70 leading-relaxed">
               Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
               Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
               als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
@@ -91,8 +88,8 @@ export default function ImpressumDe() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-2">Haftung für Links</h3>
-            <p className="text-sm text-primary/70 leading-relaxed">
+            <h3 className="text-base font-semibold text-primary mb-2">Haftung für Links</h3>
+            <p className="text-base text-primary/70 leading-relaxed">
               Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
               keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr
               übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
@@ -108,7 +105,7 @@ export default function ImpressumDe() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Urheberrecht
         </h2>
-        <p className="text-sm text-primary/70 leading-relaxed">
+        <p className="text-base text-primary/70 leading-relaxed">
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
           dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
           der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen

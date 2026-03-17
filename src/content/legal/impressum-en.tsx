@@ -5,7 +5,7 @@ export default function ImpressumEn() {
     <>
       {/* Authoritative version notice */}
       <section className="rounded-lg border border-accent/20 bg-accent/5 p-5">
-        <p className="text-sm text-primary/70 leading-relaxed">
+        <p className="text-base text-primary/70 leading-relaxed">
           <span className="font-semibold text-primary">Note:</span> This Legal Notice fulfils a
           requirement of German law (§ 5 TMG / § 18 Abs. 2 MStV). The{" "}
           <strong className="text-primary">German version</strong> is the sole legally binding
@@ -18,10 +18,10 @@ export default function ImpressumEn() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Service Provider — § 5 TMG
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
-          <p><Placeholder>Full name / company name</Placeholder></p>
-          <p><Placeholder>Street and house number</Placeholder></p>
-          <p><Placeholder>Post code and city</Placeholder></p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
+          <p>Cenk Korkmaz</p>
+          <p>Kleinhöchbergerstraße 45</p>
+          <p>71560 Sulzbach an der Murr</p>
           <p>Germany</p>
         </div>
       </section>
@@ -31,10 +31,10 @@ export default function ImpressumEn() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Contact
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Phone:</span>{" "}
-            <Placeholder>Enter phone number</Placeholder>
+            <a href="tel:+49015734376057" className="text-primary/70 hover:text-accent">+49 157 34376057</a>
           </p>
           <p>
             <span className="text-primary/50">Email:</span>{" "}
@@ -50,25 +50,21 @@ export default function ImpressumEn() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Professional Regulations
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Professional title:</span>{" "}
-            <Placeholder>e.g. Freelance IT Consultant / Software Developer</Placeholder>
-          </p>
-          <p>
-            <span className="text-primary/50">Competent chamber:</span>{" "}
-            <Placeholder>if applicable — otherwise remove this section</Placeholder>
+            Freelance Software Developer
           </p>
         </div>
       </section>
 
-      {/* VAT */}
+      {/* Tax Number */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          VAT Identification Number
+          Tax Number
         </h2>
-        <p className="text-sm text-primary/70 leading-relaxed">
-          <Placeholder>VAT ID pursuant to § 27a German VAT Act — if applicable, otherwise remove this section</Placeholder>
+        <p className="text-base text-primary/70 leading-relaxed">
+          The tax number will be displayed here upon receipt from the tax office.
         </p>
       </section>
 
@@ -77,9 +73,10 @@ export default function ImpressumEn() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Person Responsible for Content — § 18 (2) MStV
         </h2>
-        <div className="text-sm text-primary/70 leading-relaxed space-y-2">
-          <p><Placeholder>Name of responsible person</Placeholder></p>
-          <p><Placeholder>Address — if different from above</Placeholder></p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-2">
+          <p>Cenk Korkmaz</p>
+          <p>Kleinhöchbergerstraße 45</p>
+          <p>71560 Sulzbach an der Murr</p>
         </div>
       </section>
 
@@ -90,8 +87,8 @@ export default function ImpressumEn() {
         </h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-2">Liability for content</h3>
-            <p className="text-sm text-primary/70 leading-relaxed">
+            <h3 className="text-base font-semibold text-primary mb-2">Liability for content</h3>
+            <p className="text-base text-primary/70 leading-relaxed">
               As a service provider we are responsible for our own content on these pages in
               accordance with § 7 (1) TMG and general law. According to §§ 8 to 10 TMG, however,
               we are not obligated as a service provider to monitor transmitted or stored
@@ -101,8 +98,8 @@ export default function ImpressumEn() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-primary mb-2">Liability for links</h3>
-            <p className="text-sm text-primary/70 leading-relaxed">
+            <h3 className="text-base font-semibold text-primary mb-2">Liability for links</h3>
+            <p className="text-base text-primary/70 leading-relaxed">
               Our website contains links to external third-party websites over whose content we
               have no influence. We therefore cannot accept any liability for this external
               content. The respective provider or operator of the pages is always responsible for
@@ -118,7 +115,7 @@ export default function ImpressumEn() {
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
           Copyright
         </h2>
-        <p className="text-sm text-primary/70 leading-relaxed">
+        <p className="text-base text-primary/70 leading-relaxed">
           The content and works created by the site operators on these pages are subject to German
           copyright law. Reproduction, editing, distribution and any kind of exploitation outside
           the limits of copyright require the written consent of the respective author or creator.
