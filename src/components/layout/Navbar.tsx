@@ -259,14 +259,13 @@ export default function Navbar() {
             </div>
 
             <div className="mt-4 px-3">
-              <Link
-                href="/#contact"
-                prefetch={false}
+              <button
+                type="button"
                 className="block w-full rounded-md bg-accent px-5 py-2.5 text-center text-base font-semibold text-primary hover:bg-accent/90 transition-colors"
                 onClick={handleContactClick}
               >
                 {t.nav.cta}
-              </Link>
+              </button>
             </div>
             <div
               className="mt-3 px-3 flex items-center gap-2"
