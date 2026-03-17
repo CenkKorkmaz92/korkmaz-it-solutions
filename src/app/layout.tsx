@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import CursorGlow from "@/components/ui/CursorGlow";
 import ClickRipple from "@/components/ui/ClickRipple";
+import DisableContextMenu from "@/components/ui/DisableContextMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${blackOpsOne.variable} antialiased font-sans`}
       >
         <LanguageProvider>
+          <DisableContextMenu />
           <CursorGlow />
           <ClickRipple />
           <Navbar />
