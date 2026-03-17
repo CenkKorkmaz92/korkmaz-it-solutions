@@ -105,6 +105,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
+            prefetch={false}
             onClick={handleLogoClick}
             className="flex items-center gap-3 text-secondary text-base sm:text-lg font-semibold tracking-tight hover:text-accent transition-colors group"
           >
@@ -124,6 +125,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   className={`text-base font-medium transition-colors link-underline ${
                     isActive(link.href)
                       ? "text-accent"
@@ -172,6 +174,7 @@ export default function Navbar() {
             </div>
             <Link
               href="/#contact"
+              prefetch={false}
               onClick={handleContactClick}
               className="inline-block rounded-md bg-accent px-5 py-2 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] hover:shadow-md hover:shadow-accent/25 transition-all duration-150"
             >
@@ -223,6 +226,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${
                       isActive(link.href)
                         ? "text-accent bg-accent/5"
@@ -257,6 +261,7 @@ export default function Navbar() {
             <div className="mt-4 px-3">
               <Link
                 href="/#contact"
+                prefetch={false}
                 className="block w-full rounded-md bg-accent px-5 py-2.5 text-center text-base font-semibold text-primary hover:bg-accent/90 transition-colors"
                 onClick={handleContactClick}
               >

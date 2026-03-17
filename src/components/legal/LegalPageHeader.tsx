@@ -19,6 +19,7 @@ export default function LegalPageHeader({ titleDe, titleEn, subtitleKey }: Props
       <Container>
         <Link
           href="/"
+          prefetch={false}
           className="text-base uppercase tracking-widest text-secondary/40 hover:text-accent transition-colors mb-6 inline-block"
         >
           {t.legal.backToHome}

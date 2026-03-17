@@ -41,6 +41,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Link
               href="/"
+              prefetch={false}
               onClick={handleLogoClick}
               className="flex items-center gap-3 text-base font-semibold tracking-tight text-accent hover:text-accent/80 transition-colors group w-fit"
             >
@@ -68,6 +69,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
+                    prefetch={false}
                     className="text-base text-secondary/50 hover:text-accent transition-colors link-underline"
                   >
                     {link.label}

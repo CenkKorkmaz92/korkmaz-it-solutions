@@ -37,6 +37,7 @@ export default function ContactCtaSection() {
               </a>
               <Link
                 href="/#services"
+                prefetch={false}
                 className="inline-flex w-full items-center justify-center rounded-md border border-accent/30 px-6 py-3.5 text-base font-semibold text-secondary hover:border-accent/70 hover:bg-accent/5 hover:shadow-[0_0_16px_rgba(0,212,255,0.15)] hover:-translate-y-px active:scale-[0.98] transition-all duration-150 sm:w-auto sm:py-3"
               >
                 {t.contact.cta2}
