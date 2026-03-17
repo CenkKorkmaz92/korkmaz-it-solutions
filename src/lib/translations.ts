@@ -94,7 +94,7 @@ export const translations = {
         {
           label: "Frontend bis Backend",
           detail:
-            "Ich arbeite über den ganzen Stack – von der UI bis zur Datenbank. Nicht alles gleichmäßig tief, aber tief genug um ein Projekt alleine durchzuziehen.",
+            "Ich arbeite über den ganzen Stack – von der UI bis zur Datenbank. Full-Stack bedeutet für mich: ein Projekt von der ersten Zeile bis zum Launch komplett zu betreuen.",
         },
         {
           label: "Direkt mit mir",
@@ -248,7 +248,7 @@ export const translations = {
         {
           label: "Frontend to backend",
           detail:
-            "I work across the stack — from UI to database. Not everything at the same depth, but deep enough to take a project from start to finish on my own.",
+            "I work across the full stack — from UI to database. Full-stack means seeing a project through completely — from the first line of code to launch.",
         },
         {
           label: "Direct line to me",
