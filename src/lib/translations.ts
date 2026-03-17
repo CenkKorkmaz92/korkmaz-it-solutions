@@ -6,139 +6,142 @@ export const translations = {
       home: "Start",
       services: "Leistungen",
       projects: "Projekte",
-      about: "Über uns",
+      about: "Über mich",
       contact: "Kontakt",
       cta: "Kontakt aufnehmen",
     },
     hero: {
-      eyebrow: "Webentwicklung & IT-Lösungen",
-      headline: "Webentwicklung und IT\u00a0\u2014",
-      headlineAccent: "Für Lösungen, die wirklich funktionieren",
-      sub: "Von Webanwendungen bis zu internen Tools — sauber entwickelt, klar erklärt und so übergeben, dass Sie wirklich besitzen, wofür Sie bezahlt haben.",
+      eyebrow: "Webentwicklung & IT",
+      headline: "Websites und Web-Apps",
+      headlineAccent: "die einfach funktionieren",
+      sub: "Ich baue was du brauchst – sauber und direkt.",
       cta1: "Kontakt aufnehmen",
       cta2: "Projekte ansehen",
-      techLabel: "Technologien, mit denen wir arbeiten",
+      techLabel: "Damit arbeite ich",
     },
     services: {
-      eyebrow: "Leistungsangebot",
-      heading: "Vier Dinge, die wir gut können",
-      sub: "Fokussierte Arbeit, ehrliche Planung, keine unnötige Komplexität — nur die richtige Lösung für das, was Sie wirklich brauchen.",
+      eyebrow: "Was ich mache",
+      heading: "Was du bekommst",
+      sub: "Klar definiert, sauber umgesetzt. Nur das, was du wirklich brauchst.",
       items: [
         {
           title: "Webentwicklung",
           description:
-            "Individuelle Webanwendungen mit der richtigen Technologie für die jeweilige Aufgabe — von einfachen Marketingseiten bis hin zu mehrschichtigen Plattformen.",
+            "Websites, Shops oder Web-Apps – ich baue was passt. Von der einfachen Seite bis zur komplexeren Plattform.",
         },
         {
           title: "IT-Beratung",
           description:
-            "Ehrliche Begleitung bei Technologieentscheidungen, Architektur und Tool-Auswahl. Praktische Empfehlungen, keine Vendor-Präferenzen.",
+            "Du hast eine Frage zu Technik, Tools oder Aufbau? Ich gebe dir eine ehrliche Einschätzung – ohne Eigeninteresse.",
         },
         {
-          title: "Automationslösungen",
+          title: "Automatisierung",
           description:
-            "Wiederkehrende Prozesse werden durch Code übernommen. Integrationen und interne Tools, die Zeit freisetzen und Fehlerquellen reduzieren.",
+            "Was du immer wieder von Hand machst, kann Code übernehmen. Weniger Aufwand, weniger Fehler.",
         },
         {
           title: "Hosting & Betrieb",
           description:
-            "Deployment richtig gemacht — Container, Pipelines, Konfiguration und Monitoring. Damit das, was wir bauen, auch nach der Übergabe zuverlässig läuft.",
+            "Ich sorge dafür, dass das, was gebaut wurde, auch läuft – mit sauberem Deployment, Monitoring und Konfiguration.",
         },
       ],
     },
     techStack: {
       eyebrow: "Technologie",
-      heading: "Die richtigen Werkzeuge für die Aufgabe",
-      sub: "Keine exotischen Frameworks, keine unnötigen Abhängigkeiten. Das sind die Tools, die ich gut kenne und denen ich für zuverlässige Ergebnisse vertraue.",
+      heading: "Womit ich arbeite",
+      sub: "Bewährte, stabile Tools. Nichts Exotisches, nichts Unnötiges.",
       categories: ["Frontend", "Backend", "Infrastruktur"],
     },
     projects: {
-      eyebrow: "Ausgewählte Arbeiten",
-      heading: "Ausgewählte Projekte",
-      sub: "Echte Projekte, echter Code — ein Querschnitt aus fokussierten Frontend-Arbeiten bis hin zu Full-Stack-Plattformen.",
+      eyebrow: "Projekte",
+      heading: "Was ich gebaut habe",
+      sub: "Echte Projekte, echter Code.",
       items: [
         {
-          title: "Coderr",
+          title: "Beispiel Portfolio-Seite",
           description:
-            "Ein RESTful-Backend für eine Freelancer-Plattform — Benutzerauthentifizierung, Projektlisten, Bietlogik und Profilverwaltung. API-First-Architektur, klar vom Frontend getrennt.",
+            "Modernes, responsives Portfolio mit Projektübersicht, Kontaktformular, EmailJS-Integration und zweisprachiger Oberfläche (DE/EN). Gebaut als Vorlage – zeigt was eine Portfolio-Seite können sollte.",
         },
         {
           title: "VideoFlix",
           description:
-            "Eine Full-Stack-Video-Streaming-Plattform mit Benutzerregistrierung, Abonnementsystem und adaptiver Videoauslieferung. Inklusive Chunk-Upload-Handling und Hintergrundpipeline für die Videokodierung.",
+            "Full-Stack-Videostreaming-App mit Django REST API, JWT-Authentifizierung, E-Mail-Verifizierung und automatischer Videoverarbeitung in 480p, 720p und 1080p. Frontend als Vanilla JS SPA.",
         },
         {
           title: "Madame Pearls",
           description:
-            "Eine mehrsprachige Präsentationswebsite für eine Schmuckmarke — responsive auf allen Geräten, lokalisierungsbereit und so strukturiert, dass Inhalte ohne Entwicklerbeteiligung gepflegt werden können.",
+            "Elegante Schmuck-Präsentationsseite in 4 Sprachen (Deutsch, Englisch, Griechisch, Kroatisch). Besucher können Favoriten auswählen und direkt über ein Kontaktformular anfragen. Wird noch finalisiert und demnächst live geschaltet.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "Eine stimmungsvolle Startseite für einen Tätowierer — gestaltet, um Portfolio-Arbeiten zu präsentieren, die Ästhetik des Studios zu vermitteln und Besucher zu Terminanfragen zu bewegen.",
+            "Professionelle Webseite für ein Tattoo- und Piercingstudio in Nürtingen. Bildergalerie mit über 90 Fotos, Künstlerprofile, Kontaktformular und zweisprachige Oberfläche (DE/EN).",
         },
       ],
       viewOnGitHub: "Auf GitHub ansehen",
       viewLive: "Live ansehen",
+      comingSoon: "In Entwicklung",
     },
     about: {
       eyebrow: "Über mich",
       heading: "Die Person hinter der Arbeit",
-      para1: "Korkmaz IT Solutions wurde gegründet von Cenk Korkmaz — einem Softwareentwickler mit fundierter Full-Stack-Ausbildung und einem Hintergrund, der lange vor dem ersten Code in industriellen Umgebungen begann.",
-      para2: "Das Unternehmen wurde auf einem klaren Grundsatz aufgebaut: Kunden verdienen klare Kommunikation, ehrliche Beratung und Software, die das Problem tatsächlich löst — ohne unnötige Komplexität oder aufgeblähten Scope.",
-      para3: "Von React und Next.js im Frontend bis zu Python, Django, PostgreSQL und Docker im Backend — jedes Projekt wird von Anfang bis Ende von derselben Person betreut, vom ersten Gespräch bis zur finalen Übergabe.",
+      para1: "Hi, ich bin Cenk. Ich baue Websites und Web-Apps.",
+      para2: "Nicht mehr, nicht weniger. Sauber, direkt, ohne Umwege.",
+      para3: "Ich habe vorher in der Industrie gearbeitet – das prägt wie ich denke: Systeme sollen laufen, nicht nur gut klingen.",
+      para4: "Du arbeitest immer direkt mit mir. Kein Team, kein Mittelmann.",
+      para5: "Ich bin dabei von der Idee bis zur Übergabe.",
       values: [
         {
-          label: "Full-Stack von vorne bis hinten",
+          label: "Frontend bis Backend",
           detail:
-            "Sicher über den gesamten Stack — vom Komponentendesign und TypeScript bis hin zu serverseitiger Logik, Datenbanken und containerisierten Deployments.",
+            "Ich arbeite über den ganzen Stack – von der UI bis zur Datenbank. Nicht alles gleichmäßig tief, aber tief genug um ein Projekt alleine durchzuziehen.",
         },
         {
-          label: "Direkte Zusammenarbeit",
+          label: "Direkt mit mir",
           detail:
-            "Sie arbeiten direkt mit dem Gründer zusammen, nicht mit einem Account Manager. Keine Zwischenschritte, keine Missverständnisse.",
+            "Du arbeitest mit mir, nicht mit jemandem, der mich vertritt. Was du sagst, kommt bei mir an – und umgekehrt.",
         },
         {
-          label: "Langfristiges Denken",
+          label: "Code, der bleibt",
           detail:
-            "Entwickelt für Nachhaltigkeit — Code, der sich leicht erweitern, warten und an zukünftige Entwickler übergeben lässt.",
+            "Ich baue so, dass andere – oder du selbst – später problemlos weiterarbeiten können. Kein Wegwerfcode.",
         },
       ],
     },
     process: {
-      eyebrow: "So arbeiten wir",
-      heading: "Ein klarer Ablauf von Anfang bis Ende",
-      sub: "Drei Schritte, die Projekte auf Kurs halten — und Kunden in jeder Phase informiert.",
+      eyebrow: "Ablauf",
+      heading: "So läuft ein Projekt",
+      sub: "Kein Durcheinander, keine Überraschungen. Drei klare Schritte.",
       steps: [
         {
           number: "01",
-          title: "Analyse",
+          title: "Gespräch",
           description:
-            "Ein strukturiertes Gespräch über Ihre Ziele, Rahmenbedingungen und bestehende Systeme. Das definiert den Scope und stellt sicher, dass wir das richtige Problem lösen — bevor eine einzige Zeile Code geschrieben wird.",
+            "Wir reden über dein Ziel, dein Budget und was du schon hast. Daraus ergibt sich was gebaut werden muss – bevor irgendjemand Code schreibt.",
         },
         {
           number: "02",
-          title: "Entwicklung",
+          title: "Umsetzung",
           description:
-            "Die Arbeit erfolgt in klaren, überprüfbaren Phasen. Sie werden in jedem Schritt informiert — keine Blackbox-Entwicklung. Code wird nach hohem Standard entwickelt und von Anfang an dokumentiert.",
+            "Ich arbeite in klaren Phasen und halte dich auf dem Laufenden. Du weißt immer wo wir stehen. Kein Raten, keine Blackbox.",
         },
         {
           number: "03",
           title: "Übergabe",
           description:
-            "Die Lieferung umfasst Deployment, eine abschließende Prüfung und eine ordentliche Übergabe. Sie verlassen das Projekt mit vollem Eigentum an dem, was gebaut wurde — und einem klaren Verständnis seiner Funktionsweise.",
+            "Du bekommst das fertige Projekt – deployed, getestet, erklärt. Der Code gehört dir, und du verstehst was er macht.",
         },
       ],
     },
     contact: {
-      eyebrow: "Jetzt starten",
-      heading: "Lassen Sie uns herausfinden, was Sie brauchen",
-      sub: "Egal ob detailliertes Briefing oder grobe Idee — schreiben Sie eine Nachricht und wir klären gemeinsam, was Sinn ergibt. Unverbindlich, kein Verkaufsgespräch.",
-      cta1: "Nachricht schreiben",
+      eyebrow: "Kontakt",
+      heading: "Lass uns dein Projekt umsetzen",
+      sub: "Schreib mir kurz was du brauchst – ich melde mich.",
+      cta1: "Projekt anfragen",
       cta2: "Leistungen ansehen",
     },
     footer: {
-      tagline: "Webentwicklung und IT — solide gebaut.",
+      tagline: "Sauber gebaut. Ehrlich erklärt.",
       navigation: "Navigation",
       contact: "Kontakt",
       rights: "Alle Rechte vorbehalten.",
@@ -162,134 +165,137 @@ export const translations = {
       cta: "Get in Touch",
     },
     hero: {
-      eyebrow: "Web Development & IT Solutions",
-      headline: "Web Development and IT\u00a0\u2014",
-      headlineAccent: "Built to Solve Real Problems",
-      sub: "From web applications to internal tools — built properly, explained clearly, and handed over so you actually own what you paid for.",
+      eyebrow: "Web Development & IT",
+      headline: "Websites and Web Apps",
+      headlineAccent: "That Actually Work",
+      sub: "I build what you need — clean and direct.",
       cta1: "Get in Touch",
       cta2: "View Projects",
-      techLabel: "Technologies we work with",
+      techLabel: "What I work with",
     },
     services: {
-      eyebrow: "What We Offer",
-      heading: "Four Things We Do Well",
-      sub: "Focused work, honest scoping, no unnecessary complexity — just the right solution for what you actually need.",
+      eyebrow: "What I Do",
+      heading: "What You Get",
+      sub: "Clearly scoped, cleanly built. Only what you actually need.",
       items: [
         {
           title: "Web Development",
           description:
-            "Custom web applications built with the right technology for the job — from straightforward marketing sites to multi-layer platforms.",
+            "Websites, shops or web apps — I build what fits. From a simple site to a more complex platform.",
         },
         {
           title: "IT Consulting",
           description:
-            "Honest guidance on technology decisions, architecture and tool selection. You get practical advice, not a vendor recommendation.",
+            "Got a question about tech, tools or architecture? I give you an honest take — no agenda, no vendor preference.",
         },
         {
-          title: "Automation Solutions",
+          title: "Automation",
           description:
-            "Repetitive processes handled by code instead of people. Integrations and internal tools that free up time and reduce room for error.",
+            "What you keep doing by hand can often be handled by code. Less effort, fewer mistakes.",
         },
         {
           title: "Hosting & Deployment",
           description:
-            "Deployment done properly — containers, pipelines, configuration and monitoring. So what we build stays running after handover.",
+            "I make sure what was built keeps running — clean deployment, monitoring and configuration included.",
         },
       ],
     },
     techStack: {
       eyebrow: "Technology",
-      heading: "Built with the Right Tools",
-      sub: "No exotic frameworks, no unnecessary dependencies. These are the tools I know well and trust to deliver reliable results.",
+      heading: "What I Work With",
+      sub: "Proven, stable tools. Nothing exotic, nothing unnecessary.",
       categories: ["Frontend", "Backend", "Infrastructure"],
     },
     projects: {
-      eyebrow: "Selected Work",
-      heading: "Selected Projects",
-      sub: "Real projects, real code — a cross-section of work from focused frontend builds to full-stack platforms.",
+      eyebrow: "Projects",
+      heading: "What I've Built",
+      sub: "Real projects, real code.",
       items: [
         {
-          title: "Coderr",
+          title: "Example Portfolio Site",
           description:
-            "A RESTful backend for a freelance marketplace — user authentication, project listings, bidding logic and profile management. Designed with an API-first architecture, cleanly separated from any frontend client.",
+            "Modern, responsive portfolio with project showcase, contact form, EmailJS integration, and bilingual interface (DE/EN). Built as a template — showing what a portfolio site should do.",
         },
         {
           title: "VideoFlix",
           description:
-            "A full-stack video streaming platform with user registration, subscription management and adaptive video delivery. Includes chunked upload handling and a background processing pipeline for video encoding.",
+            "Full-stack video streaming app with Django REST API, JWT authentication, email verification, and automatic video processing at 480p, 720p, and 1080p. Frontend is a vanilla JS SPA.",
         },
         {
           title: "Madame Pearls",
           description:
-            "A polished multilingual presentation website for a jewellery brand — responsive across all devices, localisation-ready and structured for straightforward content updates without developer involvement.",
+            "Elegant jewellery showcase in 4 languages (German, English, Greek, Croatian). Visitors can save favourites and reach the owner directly through a contact form. Still being finalised — going live soon.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "An atmospheric homepage for a tattoo artist — designed to showcase portfolio work, communicate the studio's aesthetic and convert visitors into appointment bookings.",
+            "Professional site for a tattoo and piercing studio in Nürtingen. Gallery of 90+ images, artist profiles, contact form, and bilingual interface (DE/EN).",
         },
       ],
       viewOnGitHub: "View on GitHub",
       viewLive: "View Live",
+      comingSoon: "In Progress",
     },
     about: {
       eyebrow: "About",
       heading: "The Person Behind the Work",
-      para1: "Korkmaz IT Solutions was founded by Cenk Korkmaz — a software developer with formal training in full-stack development and a background that started in industrial environments long before it moved into code.",
-      para2: "The company was built on a straightforward principle: clients deserve clear communication, honest advice and software that actually solves the problem — without unnecessary complexity or inflated scope.",
-      para3: "From React and Next.js on the frontend to Python, Django, PostgreSQL and Docker on the backend — every project is handled end-to-end, by the same person, from first conversation to final handover.",
+      para1: "Hi, I'm Cenk. I build websites and web apps.",
+      para2: "Nothing more, nothing less. Clean, direct, no detours.",
+      para3: "I worked in industry before coding full-time — that shapes how I think: things should run, not just sound good.",
+      para4: "You always work directly with me. No team, no middleman.",
+      para5: "I'm there from the idea to handover.",
       values: [
         {
-          label: "Full-stack, front to back",
+          label: "Frontend to backend",
           detail:
-            "Comfortable across the full stack — from component design and TypeScript to server-side logic, databases and containerised deployments.",
+            "I work across the stack — from UI to database. Not everything at the same depth, but deep enough to take a project from start to finish on my own.",
         },
         {
-          label: "Direct collaboration",
+          label: "Direct line to me",
           detail:
-            "You work directly with the founder, not an account manager. No handoffs, no miscommunication.",
+            "You work with me, not someone who represents me. What you say reaches me directly — and the other way around.",
         },
         {
-          label: "Long-term thinking",
+          label: "Code that lasts",
           detail:
-            "Built for sustainability — code that is easy to extend, maintain and hand over to whoever comes next.",
+            "I build so others — or you — can work on it later without trouble. No throwaway code.",
         },
       ],
     },
     process: {
-      eyebrow: "How We Work",
-      heading: "A Clear Process from Start to Finish",
-      sub: "Three steps that keep projects on track — and clients informed at every stage.",
+      eyebrow: "How It Works",
+      heading: "How a Project Runs",
+      sub: "No confusion, no surprises. Three clear steps.",
       steps: [
         {
           number: "01",
-          title: "Discovery",
+          title: "Conversation",
           description:
-            "A structured conversation about your goals, constraints and existing setup. This defines the scope and ensures we're solving the right problem before writing a single line of code.",
+            "We talk about your goal, your budget and what you already have. That defines what needs to be built — before anyone writes a line of code.",
         },
         {
           number: "02",
-          title: "Development",
+          title: "Build",
           description:
-            "Work happens in clear, reviewable stages. You stay informed at every step — no surprises, no black-box development. Code is written to a high standard and documented as we go.",
+            "I work in clear phases and keep you updated. You always know where things stand. No guessing, no black box.",
         },
         {
           number: "03",
           title: "Handover",
           description:
-            "Delivery includes deployment, a final review and a proper handover. You leave with full ownership of what was built — and a clear understanding of how it works.",
+            "You get the finished project — deployed, tested, explained. The code is yours and you understand what it does.",
         },
       ],
     },
     contact: {
-      eyebrow: "Get Started",
-      heading: "Let's Figure Out What You Need",
-      sub: "Whether you have a detailed brief or just a rough idea — send a message and we will work out what makes sense. No obligation, no sales pitch.",
-      cta1: "Send a Message",
+      eyebrow: "Contact",
+      heading: "Let's Build Your Project",
+      sub: "Tell me briefly what you need — I'll get back to you.",
+      cta1: "Request a Project",
       cta2: "View Services",
     },
     footer: {
-      tagline: "Web development and IT — built to last.",
+      tagline: "Built clean. Explained honestly.",
       navigation: "Navigation",
       contact: "Contact",
       rights: "All rights reserved.",

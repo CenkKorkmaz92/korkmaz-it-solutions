@@ -19,14 +19,14 @@ export default function LegalPageHeader({ titleDe, titleEn, subtitleKey }: Props
       <Container>
         <Link
           href="/"
-          className="text-xs uppercase tracking-widest text-secondary/40 hover:text-accent transition-colors mb-6 inline-block"
+          className="text-base uppercase tracking-widest text-secondary/40 hover:text-accent transition-colors mb-6 inline-block"
         >
           {t.legal.backToHome}
         </Link>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           {lang === "en" ? titleEn : titleDe}
         </h1>
-        <p className="mt-3 text-secondary/60 text-sm">{t.legal[subtitleKey]}</p>
+        <p className="mt-3 text-secondary/60 text-base">{t.legal[subtitleKey]}</p>
       </Container>
     </div>
   );

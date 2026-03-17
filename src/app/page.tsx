@@ -8,7 +8,6 @@ import ProcessSection from "@/sections/ProcessSection";
 import ContactCtaSection from "@/sections/ContactCtaSection";
 
 export const metadata: Metadata = {
-  title: "Web Development & IT Solutions",
   alternates: {
     canonical: "https://korkmaz-it-solutions.com",
   },
@@ -18,10 +17,10 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <AboutSection />
       <ServicesSection />
       <TechStackSection />
       <ProjectsSection />
-      <AboutSection />
       <ProcessSection />
       <ContactCtaSection />
     </main>
