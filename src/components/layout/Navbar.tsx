@@ -27,6 +27,21 @@ export default function Navbar() {
     }
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    if (pathname === "/") {
+      // Already on homepage -> scroll to contact
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // On other page -> navigate to homepage contact section
+      router.push("/#contact");
+    }
+  };
+
   useEffect(() => {
     if (pathname !== "/") {
       setActiveHref(pathname);
@@ -157,6 +172,7 @@ export default function Navbar() {
             </div>
             <Link
               href="/#contact"
+              onClick={handleContactClick}
               className="inline-block rounded-md bg-accent px-5 py-2 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] hover:shadow-md hover:shadow-accent/25 transition-all duration-150"
             >
               {t.nav.cta}
@@ -194,6 +210,7 @@ export default function Navbar() {
         <div
           id="mobile-menu"
           aria-hidden={!mobileOpen}
+          inert={!mobileOpen || undefined}
           className={`md:hidden fixed inset-x-0 top-16 z-40 transition-all duration-300 ease-in-out ${
             mobileOpen
               ? "opacity-100 translate-y-0 pointer-events-auto"
@@ -226,6 +243,7 @@ export default function Navbar() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      prefetch={false}
                       className="block rounded-md px-3 py-2.5 text-base font-medium text-secondary/60 hover:bg-secondary/10 hover:text-secondary transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
@@ -240,7 +258,7 @@ export default function Navbar() {
               <Link
                 href="/#contact"
                 className="block w-full rounded-md bg-accent px-5 py-2.5 text-center text-base font-semibold text-primary hover:bg-accent/90 transition-colors"
-                onClick={() => setMobileOpen(false)}
+                onClick={handleContactClick}
               >
                 {t.nav.cta}
               </Link>
