@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import Container from "@/components/layout/Container";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -12,26 +13,48 @@ export default function Navbar() {
   const { lang, setLang } = useLanguage();
   const t = useTranslation();
   const pathname = usePathname();
+  const router = useRouter();
   const [activeHref, setActiveHref] = useState("/");
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === "/") {
+      // Already on homepage -> scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // On other page -> navigate to homepage
+      router.push("/");
+    }
+  };
 
   useEffect(() => {
     if (pathname !== "/") {
       setActiveHref(pathname);
       return;
     }
-    const sectionIds = ["hero", "services", "tech-stack", "projects", "about", "process", "contact"];
+    const sectionIds = ["hero", "about", "services", "tech-stack", "projects", "process", "contact"];
     const handleScroll = () => {
       // Near bottom of page → always Contact
       if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 300) {
         setActiveHref("/#contact");
         return;
       }
-      // Walk sections top→bottom; last one whose top has passed 80px wins
+      // Find section closest to top of viewport (accounting for navbar height)
       let active = "/";
+      const navbarHeight = 100; // Navbar + buffer
       for (const id of sectionIds) {
         const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 80) {
-          active = id === "hero" ? "/" : `/#${id}`;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // Section is considered active if its top is above middle of screen
+          if (rect.top <= navbarHeight && rect.bottom > navbarHeight) {
+            active = id === "hero" ? "/" : `/#${id}`;
+            break; // Use first match
+          }
+          // Or if section top has passed navbar
+          if (rect.top <= navbarHeight) {
+            active = id === "hero" ? "/" : `/#${id}`;
+          }
         }
       }
       setActiveHref(active);
@@ -46,10 +69,15 @@ export default function Navbar() {
 
   const navLinks = [
     { label: t.nav.home, href: "/" },
+    { label: t.nav.about, href: "/#about" },
     { label: t.nav.services, href: "/#services" },
     { label: t.nav.projects, href: "/#projects" },
-    { label: t.nav.about, href: "/#about" },
     { label: t.nav.contact, href: "/#contact" },
+  ];
+
+  const legalLinks = [
+    { label: t.legal.impressumLabel, href: "/impressum" },
+    { label: t.legal.datenschutzLabel, href: "/datenschutz" },
   ];
 
   return (
@@ -62,9 +90,17 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-secondary text-base sm:text-lg font-semibold tracking-tight hover:text-accent transition-colors link-underline"
+            onClick={handleLogoClick}
+            className="flex items-center gap-3 text-secondary text-base sm:text-lg font-semibold tracking-tight hover:text-accent transition-colors group"
           >
-            Korkmaz IT Solutions
+            <Image 
+              src="/icon.png" 
+              alt="Korkmaz IT Solutions Logo" 
+              width={32} 
+              height={32}
+              className="w-8 h-8 transition-transform group-hover:scale-110"
+            />
+            <span className="link-underline">Korkmaz IT Solutions</span>
           </Link>
 
           {/* Desktop nav links */}
@@ -73,7 +109,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-sm font-medium transition-colors link-underline ${
+                  className={`text-base font-medium transition-colors link-underline ${
                     isActive(link.href)
                       ? "text-accent"
                       : "text-secondary/70 hover:text-secondary"
@@ -88,7 +124,7 @@ export default function Navbar() {
           {/* Desktop right: language toggle + CTA */}
           <div className="hidden md:flex items-center gap-5">
             <div
-              className="flex items-center gap-1.5 text-xs font-semibold"
+              className="flex items-center gap-1.5 text-base font-semibold"
               aria-label="Sprache wählen"
             >
               <button
@@ -121,7 +157,7 @@ export default function Navbar() {
             </div>
             <Link
               href="/#contact"
-              className="inline-block rounded-md bg-accent px-5 py-2 text-sm font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] hover:shadow-md hover:shadow-accent/25 transition-all duration-150"
+              className="inline-block rounded-md bg-accent px-5 py-2 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] hover:shadow-md hover:shadow-accent/25 transition-all duration-150"
             >
               {t.nav.cta}
             </Link>
@@ -154,15 +190,23 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div id="mobile-menu" className="md:hidden pb-4">
+        {/* Mobile menu — fixed overlay, slides in below navbar, no layout shift */}
+        <div
+          id="mobile-menu"
+          aria-hidden={!mobileOpen}
+          className={`md:hidden fixed inset-x-0 top-16 z-40 transition-all duration-300 ease-in-out ${
+            mobileOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-2 pointer-events-none"
+          }`}
+        >
+          <div className="bg-primary/95 backdrop-blur-md border-b border-accent/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] px-4 pb-5 pt-3">
             <ul className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    className={`block rounded-md px-3 py-2.5 text-base font-medium transition-colors ${
                       isActive(link.href)
                         ? "text-accent bg-accent/5"
                         : "text-secondary/80 hover:bg-secondary/10 hover:text-secondary"
@@ -174,10 +218,28 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
+            
+            {/* Legal Links */}
+            <div className="mt-4 pt-4 border-t border-accent/10">
+              <ul className="flex flex-col gap-1">
+                {legalLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="block rounded-md px-3 py-2.5 text-base font-medium text-secondary/60 hover:bg-secondary/10 hover:text-secondary transition-colors"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div className="mt-4 px-3">
               <Link
                 href="/#contact"
-                className="block w-full rounded-md bg-accent px-5 py-2.5 text-center text-sm font-semibold text-primary hover:bg-accent/90 transition-colors"
+                className="block w-full rounded-md bg-accent px-5 py-2.5 text-center text-base font-semibold text-primary hover:bg-accent/90 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {t.nav.cta}
@@ -189,7 +251,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setLang("de")}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-base font-medium transition-colors ${
                   lang === "de"
                     ? "text-secondary"
                     : "text-secondary/40 hover:text-secondary/70"
@@ -204,7 +266,7 @@ export default function Navbar() {
               </span>
               <button
                 onClick={() => setLang("en")}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-base font-medium transition-colors ${
                   lang === "en"
                     ? "text-secondary"
                     : "text-secondary/40 hover:text-secondary/70"
@@ -216,7 +278,7 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-        )}
+        </div>
       </Container>
     </header>
   );
