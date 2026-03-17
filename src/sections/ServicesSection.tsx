@@ -7,7 +7,7 @@ import { useReveal } from "@/hooks/useReveal";
 export default function ServicesSection() {
   const t = useTranslation();
   const headerRef = useReveal();
-  const gridRef = useReveal();
+  const gridRef = useReveal<HTMLUListElement>();
   return (
     <section id="services" aria-label="Services" className="relative bg-surface overflow-hidden fade-to-primary">
       <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
@@ -15,7 +15,7 @@ export default function ServicesSection() {
         <div className="relative z-10 py-24 sm:py-32">
           {/* Header */}
           <div ref={headerRef} className="reveal max-w-2xl mb-10 sm:mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
+            <p className="text-base font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
               {t.services.eyebrow}
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
@@ -37,7 +37,7 @@ export default function ServicesSection() {
                 <h3 className="text-base font-semibold text-secondary">
                   {service.title}
                 </h3>
-                <p className="text-sm text-secondary/50 leading-relaxed">
+                <p className="text-base text-secondary/50 leading-relaxed">
                   {service.description}
                 </p>
               </li>

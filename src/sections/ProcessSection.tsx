@@ -8,7 +8,7 @@ import { useReveal } from "@/hooks/useReveal";
 export default function ProcessSection() {
   const t = useTranslation();
   const headerRef = useReveal();
-  const stepsRef = useReveal();
+  const stepsRef = useReveal<HTMLOListElement>();
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ProcessSection() {
         <div className="relative z-10 py-24 sm:py-32">
           {/* Header */}
           <div ref={headerRef} className="reveal max-w-2xl mb-10 sm:mb-14">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
+            <p className="text-base font-semibold uppercase tracking-widest text-accent mb-4 glow-text">
               {t.process.eyebrow}
             </p>
             <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl">
@@ -49,10 +49,9 @@ export default function ProcessSection() {
                   style={{
                     fontFamily: "var(--font-black-ops)",
                     fontSize: "5rem",
-                    ...(activeStep !== i && {
-                      color: "rgba(0,212,255,0.2)",
-                      transition: "color 400ms ease",
-                    }),
+                    color: activeStep === i ? undefined : "rgba(0,212,255,0.2)",
+                    animation: activeStep === i ? undefined : "none",
+                    transition: "color 0ms",
                   }}
                 >
                   {number}
@@ -62,7 +61,7 @@ export default function ProcessSection() {
                   <h3 className="text-base font-semibold text-secondary mb-2">
                     {title}
                   </h3>
-                  <p className="text-sm text-secondary/50 leading-relaxed">
+                  <p className="text-base text-secondary/50 leading-relaxed">
                     {description}
                   </p>
                 </div>
