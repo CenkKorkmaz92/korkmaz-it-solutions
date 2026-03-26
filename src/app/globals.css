@@ -203,7 +203,7 @@ html {
   transition: opacity 0.4s ease;
   animation: border-travel 2.5s linear infinite paused;
   pointer-events: none;
-  z-index: 0;
+  z-index: 10;
 }
 .cyber-card:hover::before {
   opacity: 1;
