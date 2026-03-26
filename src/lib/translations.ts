@@ -18,8 +18,8 @@ export const translations = {
     hero: {
       eyebrow: "Webentwicklung & IT",
       headline: "Websites und Web-Apps",
-      headlineAccent: "die einfach funktionieren",
-      sub: "Ich baue was du brauchst – sauber und direkt.",
+      headlineAccent: "die Ergebnisse bringen.",
+      sub: "Ich baue schnelle, saubere Weblösungen für Selbstständige und Unternehmen. Direkt, ohne Umwege.",
       cta1: "Kontakt aufnehmen",
       cta2: "Projekte ansehen",
       techLabel: "Damit arbeite ich",
@@ -32,29 +32,29 @@ export const translations = {
         {
           title: "Webentwicklung",
           description:
-            "Websites, Shops oder Web-Apps – ich baue was passt. Von der einfachen Seite bis zur komplexeren Plattform.",
+            "Individuelle Websites und Web-Apps – schnell, responsive und auf dein Business abgestimmt.",
         },
         {
-          title: "IT-Beratung",
+          title: "Performance",
           description:
-            "Du hast eine Frage zu Technik, Tools oder Aufbau? Ich gebe dir eine ehrliche Einschätzung – ohne Eigeninteresse.",
+            "Optimierte Ladezeiten, saubere Struktur und starke Nutzererfahrung.",
         },
         {
           title: "Automatisierung",
           description:
-            "Was du immer wieder von Hand machst, kann Code übernehmen. Weniger Aufwand, weniger Fehler.",
+            "Formulare, APIs und Prozesse, die dir Zeit sparen und Arbeit abnehmen.",
         },
         {
-          title: "Hosting & Betrieb",
+          title: "Beratung",
           description:
-            "Ich sorge dafür, dass das, was gebaut wurde, auch läuft – mit sauberem Deployment, Monitoring und Konfiguration.",
+            "Klare Empfehlungen statt Technik-Blabla – ich sage dir, was wirklich Sinn macht.",
         },
       ],
     },
     techStack: {
       eyebrow: "Technologie",
       heading: "Womit ich arbeite",
-      sub: "Bewährte, stabile Tools. Nichts Exotisches, nichts Unnötiges.",
+      sub: "Moderne Technologien für stabile und skalierbare Lösungen.",
       categories: ["Frontend", "Backend", "Infrastruktur"],
     },
     projects: {
@@ -65,36 +65,35 @@ export const translations = {
         {
           title: "Beispiel Portfolio-Seite",
           description:
-            "Modernes, responsives Portfolio mit Projektübersicht, Kontaktformular, EmailJS-Integration und zweisprachiger Oberfläche (DE/EN). Gebaut als Vorlage – zeigt was eine Portfolio-Seite können sollte.",
+            "Eine Vorlage für professionelle Portfolio-Websites. Zweisprachig (DE/EN), mit Projektübersicht und direktem Kontaktformular – fertig zum Anpassen.",
         },
         {
-          title: "VideoFlix",
+          title: "Online CV",
           description:
-            "Full-Stack-Videostreaming-App mit Django REST API, JWT-Authentifizierung, E-Mail-Verifizierung und automatischer Videoverarbeitung in 480p, 720p und 1080p. Frontend als Vanilla JS SPA.",
+            "Digitaler Lebenslauf für einen Logistik-Manager. Übersichtlich, professionell, mobil optimiert – als persönliche Online-Präsenz statt PDF.",
         },
         {
           title: "Madame Pearls",
           description:
-            "Elegante Schmuck-Präsentationsseite in 4 Sprachen (Deutsch, Englisch, Griechisch, Kroatisch). Besucher können Favoriten auswählen und direkt über ein Kontaktformular anfragen. Wird noch finalisiert und demnächst live geschaltet.",
+            "Präsentationsseite für ein Schmuck-Label – in vier Sprachen (DE, EN, GR, HR). Besucher können Favoriten markieren und direkt eine Anfrage senden. In finaler Entwicklungsphase.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "Professionelle Webseite für ein Tattoo- und Piercingstudio in Nürtingen. Bildergalerie mit über 90 Fotos, Künstlerprofile, Kontaktformular und zweisprachige Oberfläche (DE/EN).",
+            "Website für ein Tattoo- und Piercingstudio in Nürtingen. Mit Bildergalerie, Künstlerprofilen und Kontaktformular – zweisprachig (DE/EN), damit auch internationale Kunden sich zurechtfinden.",
         },
       ],
-      viewOnGitHub: "Auf GitHub ansehen",
       viewLive: "Live ansehen",
       comingSoon: "In Entwicklung",
     },
     about: {
       eyebrow: "Über mich",
       heading: "Die Person hinter der Arbeit",
-      para1: "Hi, ich bin Cenk. Ich baue Websites und Web-Apps.",
-      para2: "Nicht mehr, nicht weniger. Sauber, direkt, ohne Umwege.",
-      para3: "Ich habe vorher in der Industrie gearbeitet – das prägt wie ich denke: Systeme sollen laufen, nicht nur gut klingen.",
-      para4: "Du arbeitest immer direkt mit mir. Kein Team, kein Mittelmann.",
-      para5: "Ich bin dabei von der Idee bis zur Übergabe.",
+      para1: "Hi, ich bin Cenk. Ich entwickle moderne Websites und Web-Apps mit Fokus auf Performance, Klarheit und echte Ergebnisse. Kein Agentur-Overhead, kein unnötiger Prozess – du arbeitest direkt mit mir. Von der Idee bis zum Livegang.",
+      para2: "",
+      para3: "",
+      para4: "",
+      para5: "",
       values: [
         {
           label: "Frontend bis Backend",
@@ -141,7 +140,7 @@ export const translations = {
     contact: {
       eyebrow: "Kontakt",
       heading: "Lass uns dein Projekt umsetzen",
-      sub: "Schreib mir kurz was du brauchst – ich melde mich.",
+      sub: "Das erste Gespräch ist kostenlos. Schreib mir kurz, was du brauchst – ich melde mich direkt bei dir.",
       cta1: "Projekt anfragen",
       cta2: "Leistungen ansehen",
     },
@@ -170,10 +169,10 @@ export const translations = {
       cta: "Get in Touch",
     },
     hero: {
-      eyebrow: "Web Development & IT",
-      headline: "Websites and Web Apps",
-      headlineAccent: "That Actually Work",
-      sub: "I build what you need — clean and direct.",
+      eyebrow: "Freelance Web Developer",
+      headline: "No middleman.",
+      headlineAccent: "You talk to the developer.",
+      sub: "You talk to me — I plan it, I build it, I deliver it. No agency overhead, no getting lost in translation.",
       cta1: "Get in Touch",
       cta2: "View Projects",
       techLabel: "What I work with",
@@ -186,29 +185,29 @@ export const translations = {
         {
           title: "Web Development",
           description:
-            "Websites, shops or web apps — I build what fits. From a simple site to a more complex platform.",
+            "Individual websites and web apps — fast, responsive and tailored to your business.",
         },
         {
-          title: "IT Consulting",
+          title: "Performance",
           description:
-            "Got a question about tech, tools or architecture? I give you an honest take — no agenda, no vendor preference.",
+            "Optimised load times, clean structure and a strong user experience.",
         },
         {
           title: "Automation",
           description:
-            "What you keep doing by hand can often be handled by code. Less effort, fewer mistakes.",
+            "Forms, APIs and processes that save you time and take work off your plate.",
         },
         {
-          title: "Hosting & Deployment",
+          title: "Consulting",
           description:
-            "I make sure what was built keeps running — clean deployment, monitoring and configuration included.",
+            "Clear recommendations instead of tech jargon — I tell you what actually makes sense.",
         },
       ],
     },
     techStack: {
       eyebrow: "Technology",
       heading: "What I Work With",
-      sub: "Proven, stable tools. Nothing exotic, nothing unnecessary.",
+      sub: "Modern technologies for stable and scalable solutions.",
       categories: ["Frontend", "Backend", "Infrastructure"],
     },
     projects: {
@@ -219,36 +218,35 @@ export const translations = {
         {
           title: "Example Portfolio Site",
           description:
-            "Modern, responsive portfolio with project showcase, contact form, EmailJS integration, and bilingual interface (DE/EN). Built as a template — showing what a portfolio site should do.",
+            "A template for professional portfolio websites. Bilingual (DE/EN), with project showcase and contact form — ready to customise.",
         },
         {
-          title: "VideoFlix",
+          title: "Online CV",
           description:
-            "Full-stack video streaming app with Django REST API, JWT authentication, email verification, and automatic video processing at 480p, 720p, and 1080p. Frontend is a vanilla JS SPA.",
+            "A digital CV for a logistics manager. Clean, professional, mobile-optimised — a personal online presence instead of a PDF.",
         },
         {
           title: "Madame Pearls",
           description:
-            "Elegant jewellery showcase in 4 languages (German, English, Greek, Croatian). Visitors can save favourites and reach the owner directly through a contact form. Still being finalised — going live soon.",
+            "Showcase site for a jewellery label — in four languages (DE, EN, GR, HR). Visitors can mark favourites and send an inquiry directly. Currently being finalised.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "Professional site for a tattoo and piercing studio in Nürtingen. Gallery of 90+ images, artist profiles, contact form, and bilingual interface (DE/EN).",
+            "Website for a tattoo and piercing studio in Nürtingen. Gallery, artist profiles, and contact form — bilingual (DE/EN) so international customers can navigate it too.",
         },
       ],
-      viewOnGitHub: "View on GitHub",
       viewLive: "View Live",
       comingSoon: "In Progress",
     },
     about: {
       eyebrow: "About",
       heading: "The Person Behind the Work",
-      para1: "Hi, I'm Cenk. I build websites and web apps.",
-      para2: "Nothing more, nothing less. Clean, direct, no detours.",
-      para3: "I worked in industry before coding full-time — that shapes how I think: things should run, not just sound good.",
-      para4: "You always work directly with me. No team, no middleman.",
-      para5: "I'm there from the idea to handover.",
+      para1: "Hi, I'm Cenk. I build modern websites and web apps with a focus on performance, clarity and real results. No agency overhead, no unnecessary process — you work directly with me. From idea to go-live.",
+      para2: "",
+      para3: "",
+      para4: "",
+      para5: "",
       values: [
         {
           label: "Frontend to backend",
@@ -258,7 +256,7 @@ export const translations = {
         {
           label: "Direct line to me",
           detail:
-            "I’m directly reachable and easy to work with. Tell me what you need — I listen and make it happen. No hassle, no runaround.",
+            "I'm directly reachable and easy to work with. Tell me what you need — I listen and make it happen. No hassle, no runaround.",
         },
         {
           label: "Code that lasts",
@@ -295,7 +293,7 @@ export const translations = {
     contact: {
       eyebrow: "Contact",
       heading: "Let's Build Your Project",
-      sub: "Tell me briefly what you need — I'll get back to you.",
+      sub: "The first consultation is free. Tell me briefly what you need — I'll get back to you directly.",
       cta1: "Request a Project",
       cta2: "View Services",
     },

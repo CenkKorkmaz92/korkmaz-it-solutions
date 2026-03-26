@@ -49,7 +49,8 @@ export default function HeroSection() {
 
           {/* Headline */}
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
-            {t.hero.headline}{" "}
+            {t.hero.headline}
+            <br />
             <span className="text-accent glow-text">{t.hero.headlineAccent}</span>
           </h1>
 
