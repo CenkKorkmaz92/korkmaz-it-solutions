@@ -1,20 +1,20 @@
 # Korkmaz IT Solutions — Official Website
 
-> The official company website for **Korkmaz IT Solutions** — delivering professional web development, IT consulting, and digital solutions.
+> The official portfolio website for **Korkmaz IT Solutions** — freelance web development and IT services by Cenk Korkmaz.
 
-Built by Cenk Korkmaz using modern web technologies with a focus on performance, accessibility, and user experience.
+Built with modern web technologies, focused on performance, clarity, and real results. No overhead, no middlemen.
 
 ---
 
-## About the Company
+## About
 
-Korkmaz IT Solutions is a professional IT services and software development company delivering modern, scalable, and reliable digital solutions to businesses. Our expertise spans web development, software engineering, and IT consulting — helping clients transform their digital presence and operations.
+Korkmaz IT Solutions is a one-person operation run by Cenk Korkmaz — a freelance web developer building websites and web applications for freelancers and businesses. Direct contact, clean code, delivered.
 
 **Contact:**
 - **Name:** Cenk Korkmaz
 - **Email:** info@korkmaz-it-solutions.com
 - **Phone:** +49 157 34376057
-- **Website:** [www.korkmaz-it-solutions.com](https://www.korkmaz-it-solutions.com)
+- **Website:** [korkmaz-it-solutions.com](https://korkmaz-it-solutions.com)
 
 ---
 
@@ -22,43 +22,52 @@ Korkmaz IT Solutions is a professional IT services and software development comp
 
 | Technology | Role |
 |---|---|
-| [Next.js 16](https://nextjs.org/) | React framework with Turbopack |
+| [Next.js 16](https://nextjs.org/) | React framework with Turbopack, static export |
 | [React 19](https://react.dev/) | UI library |
-| [TypeScript](https://www.typescriptlang.org/) | Type-safe development |
+| [TypeScript 5](https://www.typescriptlang.org/) | Type-safe development |
 | [Tailwind CSS 4](https://tailwindcss.com/) | Utility-first styling |
 | [Geist Font](https://vercel.com/font) | Typography |
-| [ESLint](https://eslint.org/) | Code quality & linting |
+| [ESLint 9](https://eslint.org/) | Code quality & linting |
 
 ---
 
-## Key Features
+## Features
 
-- **⚡ App Router** — file-based routing with server and client components
-- **📱 Fully responsive** — optimized for all screen sizes and devices
-- **🚀 Performance-first** — static generation, optimized images, and minimal bundle size
-- **🔍 SEO optimized** — metadata API, Open Graph tags, and semantic HTML throughout
-- **♿ Accessible** — built to WCAG standards with semantic markup and keyboard navigation
-- **🔒 Type-safe** — end-to-end TypeScript across all components, hooks, and utilities
-- **🌐 Bilingual** — German and English language support
-- **🎨 Cyber aesthetic** — custom design with animated components and interactive effects
-- **📄 Legal compliance** — Impressum and Datenschutzerklärung (German legal requirements)
+- **Static export** (`output: "export"`) — zero server required, deployable anywhere
+- **Bilingual (DE/EN)** — language switching via React Context with localStorage persistence
+- **SEO optimised** — full metadata API, Open Graph, Twitter cards, canonical URLs
+- **Icons & PWA-ready** — favicon.ico, apple-touch-icon, android-chrome icons, site.webmanifest
+- **Scroll reveal** — IntersectionObserver-based animations per section
+- **Cyber card effect** — animated conic-gradient border on project cards
+- **Image slider** — auto-rotating preview images per project (crossfade, 5s interval)
+- **Legal compliance** — Impressum and Datenschutzerklärung for German law requirements
+- **Fully responsive** — mobile-first layout across all sections
 
 ---
 
 ## Project Structure
 
 ```
-├── public/              # Static assets (images, icons)
+├── public/
+│   ├── favicon.ico
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── apple-touch-icon.png
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-512x512.png
+│   ├── site.webmanifest
+│   └── images/
+│       └── projects/       # Project preview images (webp)
 ├── src/
-│   ├── app/            # Next.js App Router pages
-│   ├── components/     # Reusable React components
-│   ├── content/        # Legal content (Impressum, Datenschutz)
-│   ├── contexts/       # React Context providers
-│   ├── hooks/          # Custom React hooks
-│   ├── lib/            # Utilities and translations
-│   ├── sections/       # Page sections (Hero, About, Services, etc.)
-│   ├── styles/         # Global styles
-│   └── types/          # TypeScript type definitions
+│   ├── app/                # Next.js App Router (layout, page, legal pages)
+│   ├── components/         # Reusable UI and layout components
+│   ├── content/            # Static legal content (Impressum, Datenschutz DE/EN)
+│   ├── contexts/           # LanguageContext (DE/EN switching)
+│   ├── hooks/              # useReveal, useTranslation, useMediaQuery
+│   ├── lib/                # translations.ts, utils.ts
+│   ├── sections/           # Page sections (Hero, Services, Projects, About, …)
+│   ├── styles/             # custom.css
+│   └── types/              # TypeScript type definitions
 └── ...config files
 ```
 
@@ -66,15 +75,15 @@ Korkmaz IT Solutions is a professional IT services and software development comp
 
 ## Live Website
 
-🌐 [www.korkmaz-it-solutions.com](https://www.korkmaz-it-solutions.com)
+[korkmaz-it-solutions.com](https://korkmaz-it-solutions.com)
 
 ---
 
 ## Author
 
 **Cenk Korkmaz**  
-Professional IT Services & Software Development  
-[www.korkmaz-it-solutions.com](https://www.korkmaz-it-solutions.com)
+Freelance Web Developer  
+[korkmaz-it-solutions.com](https://korkmaz-it-solutions.com)
 
 ---
 
@@ -82,5 +91,5 @@ Professional IT Services & Software Development
 
 © 2026 Korkmaz IT Solutions. All rights reserved.
 
-The source code, design, and all associated assets in this repository are the exclusive property of Korkmaz IT Solutions. Unauthorized copying, modification, distribution, or use of any part of this codebase — in whole or in part — is strictly prohibited without prior written permission from Korkmaz IT Solutions.
+The source code, design, and all associated assets are the exclusive property of Korkmaz IT Solutions. Unauthorized copying, modification, distribution, or use without prior written permission is strictly prohibited.
 
