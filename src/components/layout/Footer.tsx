@@ -100,10 +100,10 @@ export default function Footer() {
                 info@korkmaz-it-solutions.com
               </a>
               <a
-                href="tel:+49015734376057"
+                href="tel:+491773613007"
                 className="text-base text-secondary/50 hover:text-accent transition-colors"
               >
-                +49 157 34376057
+                +49 177 3613007
               </a>
             </div>
             <div className="flex items-center gap-5 pt-1">

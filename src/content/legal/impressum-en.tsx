@@ -34,7 +34,7 @@ export default function ImpressumEn() {
         <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Phone:</span>{" "}
-            <a href="tel:+49015734376057" className="text-primary/70 hover:text-accent">+49 157 34376057</a>
+            <a href="tel:+491773613007" className="text-primary/70 hover:text-accent">+49 177 3613007</a>
           </p>
           <p>
             <span className="text-primary/50">Email:</span>{" "}

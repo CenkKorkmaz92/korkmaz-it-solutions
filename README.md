@@ -13,7 +13,7 @@ Korkmaz IT Solutions is a one-person operation run by Cenk Korkmaz — a freelan
 **Contact:**
 - **Name:** Cenk Korkmaz
 - **Email:** info@korkmaz-it-solutions.com
-- **Phone:** +49 157 34376057
+- **Phone:** +49 177 3613007
 - **Website:** [korkmaz-it-solutions.com](https://korkmaz-it-solutions.com)
 
 ---
