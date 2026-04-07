@@ -25,7 +25,7 @@ const projectsMeta = [
   },
   {
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveHref: "https://korkmaz-it-solutions.com/projects/bilal-cevik/",
+    liveHref: "https://korkmaz-it-solutions.com/projects/online-cv/",
     comingSoon: false,
     previews: [
       "/images/projects/cv-preview-1.webp",
