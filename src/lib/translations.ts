@@ -65,22 +65,22 @@ export const translations = {
         {
           title: "Beispiel Portfolio-Seite",
           description:
-            "Eine Vorlage für professionelle Portfolio-Websites. Zweisprachig (DE/EN), mit Projektübersicht und direktem Kontaktformular – fertig zum Anpassen.",
+            "Viele Selbstständige haben kein überzeugendes Portfolio. Diese moderne, schnelle Website zeigt Projekte klar, wirkt professionell und ermöglicht direkt neue Kundenanfragen – zweisprachig (DE/EN) und fertig zum Anpassen.",
         },
         {
           title: "Online CV",
           description:
-            "Digitaler Lebenslauf für einen Logistik-Manager. Übersichtlich, professionell, mobil optimiert – als persönliche Online-Präsenz statt PDF.",
+            "Klassische PDFs gehen in Bewerbungsprozessen oft unter. Dieser digitale Lebenslauf ersetzt das PDF durch eine übersichtliche, mobil optimierte Website – professionell und direkt verlinkbar.",
         },
         {
           title: "Madame Pearls",
           description:
-            "Präsentationsseite für ein Schmuck-Label – in vier Sprachen (DE, EN, GR, HR). Besucher können Favoriten markieren und direkt eine Anfrage senden. In finaler Entwicklungsphase.",
+            "Das Schmuck-Label brauchte eine moderne Präsenz für internationale Kunden. Die Plattform zeigt Produkte in vier Sprachen, lässt Favoriten speichern und ermöglicht direkte Anfragen – mehr Reichweite, weniger Aufwand.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "Website für ein Tattoo- und Piercingstudio in Nürtingen. Mit Bildergalerie, Künstlerprofilen und Kontaktformular – zweisprachig (DE/EN), damit auch internationale Kunden sich zurechtfinden.",
+            "Ohne starke Online-Präsenz gehen Tattoo-Studios an Google vorbei. Diese Website zeigt Arbeiten, stellt Künstler vor und ermöglicht Kontaktaufnahme – zweisprachig, mobil optimiert und auf neue Kunden ausgerichtet.",
         },
       ],
       viewLive: "Live ansehen",
@@ -218,22 +218,22 @@ export const translations = {
         {
           title: "Example Portfolio Site",
           description:
-            "A template for professional portfolio websites. Bilingual (DE/EN), with project showcase and contact form — ready to customise.",
+            "Many freelancers lack a convincing portfolio. This fast, modern site presents projects clearly, makes a professional impression, and enables new client inquiries — bilingual (DE/EN) and ready to customise.",
         },
         {
           title: "Online CV",
           description:
-            "A digital CV for a logistics manager. Clean, professional, mobile-optimised — a personal online presence instead of a PDF.",
+            "Traditional PDFs often get lost in recruitment. This digital CV replaces the PDF with a clean, mobile-optimised website — professional and easy to share.",
         },
         {
           title: "Madame Pearls",
           description:
-            "Showcase site for a jewellery label — in four languages (DE, EN, GR, HR). Visitors can mark favourites and send an inquiry directly. Currently being finalised.",
+            "The jewellery label needed a modern presence for international customers. The platform showcases products in four languages, lets visitors save favourites and send inquiries directly — more reach, less friction.",
         },
         {
           title: "Mr. Ink Tattoo",
           description:
-            "Website for a tattoo and piercing studio in Nürtingen. Gallery, artist profiles, and contact form — bilingual (DE/EN) so international customers can navigate it too.",
+            "Without a strong online presence, tattoo studios miss out on Google searches. This site showcases work, introduces artists, and makes contact easy — bilingual, mobile-optimised, and built to attract new clients.",
         },
       ],
       viewLive: "View Live",
