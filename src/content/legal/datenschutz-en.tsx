@@ -1,5 +1,3 @@
-import Placeholder from "@/components/legal/Placeholder";
-
 export default function DatenschutzEn() {
   return (
     <>
@@ -47,8 +45,7 @@ export default function DatenschutzEn() {
             This data cannot be attributed to any specific individual and is not merged with data
             from other sources. The legal basis for processing is Art. 6(1)(f) GDPR (legitimate
             interest in the secure and functional operation of the website). Server log files are
-            managed by our hosting provider (Dogado). Information regarding retention periods can
-            be requested from the hosting provider.
+            managed by our hosting provider (Dogado) and are generally deleted automatically after a maximum of 30 days, unless statutory retention obligations require longer storage.
           </p>
         </div>
       </section>
@@ -87,10 +84,45 @@ export default function DatenschutzEn() {
         </p>
       </section>
 
-      {/* 5. Fonts */}
+      {/* 5. Processing of customer data in the context of projects */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          5. Fonts
+          5. Processing of Customer Data in the Context of Projects
+        </h2>
+        <div className="text-base text-primary/70 leading-relaxed space-y-3">
+          <p>
+            In the course of providing services (e.g. web development, IT consulting, digital
+            projects), personal data of clients is processed. This includes in particular:
+          </p>
+          <ul className="space-y-2 list-none">
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>Names and contact details (e.g. email address, phone number)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>Billing data (e.g. postal address, VAT number if applicable)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>
+                Project-related content provided by the client, such as CVs, texts, images,
+                and similar documents or materials
+              </span>
+            </li>
+          </ul>
+          <p>
+            Processing is carried out for the purpose of contract performance on the basis of
+            Art. 6(1)(b) GDPR. Data is stored for the duration of the business relationship and
+            in accordance with applicable statutory retention periods, after which it is deleted.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. Fonts */}
+      <section>
+        <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
+          6. Fonts
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           This website uses fonts from the Geist family. The font files are downloaded during
@@ -100,10 +132,10 @@ export default function DatenschutzEn() {
         </p>
       </section>
 
-      {/* 6. Cookies and tracking */}
+      {/* 7. Cookies and tracking */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          6. Cookies and Tracking
+          7. Cookies and Tracking
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           This website does not use tracking cookies, web analytics services (e.g. Google
@@ -112,10 +144,10 @@ export default function DatenschutzEn() {
         </p>
       </section>
 
-      {/* 7. External services */}
+      {/* 8. External services */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          7. External Services and Third Parties
+          8. External Services and Third Parties
         </h2>
         <div className="text-base text-primary/70 leading-relaxed space-y-3">
           <p>
@@ -154,10 +186,10 @@ export default function DatenschutzEn() {
         </div>
       </section>
 
-      {/* 8. Your rights */}
+      {/* 9. Your rights */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          8. Your Rights as a Data Subject
+          9. Your Rights as a Data Subject
         </h2>
         <p className="text-base text-primary/70 leading-relaxed mb-4">
           Under the GDPR you have the following rights:
@@ -198,10 +230,10 @@ export default function DatenschutzEn() {
         </div>
       </section>
 
-      {/* 9. Currency */}
+      {/* 10. Currency */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          9. Currency of this Privacy Policy
+          10. Currency of this Privacy Policy
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           We reserve the right to update this Privacy Policy as necessary to comply with current

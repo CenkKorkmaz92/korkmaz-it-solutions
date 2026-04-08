@@ -1,5 +1,3 @@
-import Placeholder from "@/components/legal/Placeholder";
-
 export default function DatenschutzDe() {
   return (
     <>
@@ -37,8 +35,7 @@ export default function DatenschutzDe() {
             Diese Daten sind nicht einer bestimmten Person zuordenbar und werden nicht mit Daten
             aus anderen Quellen zusammengeführt. Rechtsgrundlage für die Verarbeitung ist Art. 6
             Abs. 1 lit. f DSGVO (berechtigtes Interesse an dem sicheren und funktionsfähigen
-            Betrieb der Website). Die Server-Logfiles werden von unserem Hosting-Provider (Dogado) verwaltet.
-            Informationen zur Speicherdauer können beim Hosting-Provider erfragt werden.
+            Betrieb der Website). Die Server-Logfiles werden durch unseren Hosting-Provider (Dogado) verwaltet und in der Regel nach spätestens 30 Tagen automatisch gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten eine längere Speicherung erfordern.
           </p>
         </div>
       </section>
@@ -79,10 +76,47 @@ export default function DatenschutzDe() {
         </p>
       </section>
 
-      {/* 5. Schriftarten */}
+      {/* 5. Verarbeitung von Kundendaten im Rahmen von Projekten */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          5. Schriftarten
+          5. Verarbeitung von Kundendaten im Rahmen von Projekten
+        </h2>
+        <div className="text-base text-primary/70 leading-relaxed space-y-3">
+          <p>
+            Im Rahmen der Erbringung von Dienstleistungen (z. B. Webentwicklung, IT-Beratung,
+            Digitalprojekte) werden personenbezogene Daten von Kunden verarbeitet. Dazu zählen
+            insbesondere:
+          </p>
+          <ul className="space-y-2 list-none">
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>Namen und Kontaktdaten (z. B. E-Mail-Adresse, Telefonnummer)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>Rechnungsdaten (z. B. Anschrift, ggf. Umsatzsteuer-ID)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">–</span>
+              <span>
+                Projektbezogene Inhalte, die vom Kunden bereitgestellt werden, z. B. Lebensläufe,
+                Texte, Bilder und ähnliche Dokumente oder Materialien
+              </span>
+            </li>
+          </ul>
+          <p>
+            Die Verarbeitung erfolgt zum Zweck der Vertragserfüllung auf Grundlage von Art. 6
+            Abs. 1 lit. b DSGVO. Die Daten werden für die Dauer der Geschäftsbeziehung sowie
+            entsprechend der gesetzlichen Aufbewahrungsfristen gespeichert und anschließend
+            gelöscht.
+          </p>
+        </div>
+      </section>
+
+      {/* 6. Schriftarten */}
+      <section>
+        <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
+          6. Schriftarten
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           Diese Website verwendet die Schriftarten der Geist-Familie. Die Schriftartdateien
@@ -92,10 +126,10 @@ export default function DatenschutzDe() {
         </p>
       </section>
 
-      {/* 6. Cookies und Tracking */}
+      {/* 7. Cookies und Tracking */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          6. Cookies und Tracking
+          7. Cookies und Tracking
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           Diese Website verwendet keine Tracking-Cookies, keine Dienste zur Webanalyse
@@ -105,10 +139,10 @@ export default function DatenschutzDe() {
         </p>
       </section>
 
-      {/* 7. Externe Dienste */}
+      {/* 8. Externe Dienste */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          7. Externe Dienste und Drittanbieter
+          8. Externe Dienste und Drittanbieter
         </h2>
         <div className="text-base text-primary/70 leading-relaxed space-y-3">
           <p>
@@ -147,10 +181,10 @@ export default function DatenschutzDe() {
         </div>
       </section>
 
-      {/* 8. Ihre Rechte */}
+      {/* 9. Ihre Rechte */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          8. Ihre Rechte als betroffene Person
+          9. Ihre Rechte als betroffene Person
         </h2>
         <p className="text-base text-primary/70 leading-relaxed mb-4">
           Ihnen stehen gemäß DSGVO folgende Rechte zu:
@@ -191,10 +225,10 @@ export default function DatenschutzDe() {
         </div>
       </section>
 
-      {/* 9. Aktualität */}
+      {/* 10. Aktualität */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          9. Aktualität dieser Datenschutzerklärung
+          10. Aktualität dieser Datenschutzerklärung
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
           Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie stets
