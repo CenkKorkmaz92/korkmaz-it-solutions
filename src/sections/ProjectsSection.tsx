@@ -21,6 +21,7 @@ const projectsMeta: {
   comingSoon: boolean;
   ownProduct?: boolean;
   previews: string[];
+  altTexts: string[];
 }[] = [
   {
     type: "web",
@@ -31,6 +32,11 @@ const projectsMeta: {
       "/images/projects/portfolio-preview-1.webp",
       "/images/projects/portfolio-preview-2.webp",
       "/images/projects/portfolio-preview-3.webp",
+    ],
+    altTexts: [
+      "Responsive Portfolio-Website für Freelancer – Webentwicklung mit React und TypeScript",
+      "Portfolio-Website Screenshot – moderne Projektdarstellung für Selbstständige",
+      "Portfolio-Website Mobilansicht – Webentwicklung Region Stuttgart",
     ],
   },
   {
@@ -43,6 +49,11 @@ const projectsMeta: {
       "/images/projects/cv-preview-2.webp",
       "/images/projects/cv-preview-3.webp",
     ],
+    altTexts: [
+      "Online-Lebenslauf Website mit Next.js – professionelle Bewerbungspräsenz",
+      "Digitaler CV Screenshot – moderne Alternative zum PDF-Lebenslauf",
+      "Online CV Mobilansicht – Webentwicklung mit Next.js und TypeScript",
+    ],
   },
   {
     type: "web",
@@ -54,6 +65,11 @@ const projectsMeta: {
       "/images/projects/madame-pearls-preview-2.webp",
       "/images/projects/madame-pearls-preview-3.webp",
     ],
+    altTexts: [
+      "Madame Pearls Schmuck-Website – mehrsprachige Produktpräsentation mit Angular",
+      "Madame Pearls Website Screenshot – internationale Schmuckmarke, Webentwicklung Stuttgart",
+      "Madame Pearls Detailansicht – responsive Webentwicklung mit TypeScript",
+    ],
   },
   {
     type: "web",
@@ -64,6 +80,11 @@ const projectsMeta: {
       "/images/projects/mr-ink-preview-1.webp",
       "/images/projects/mr-ink-preview-2.webp",
       "/images/projects/mr-ink-preview-3.webp",
+    ],
+    altTexts: [
+      "Mr. Ink Tattoo Studio Website – lokale Gewerbewebsite mit React, Webentwicklung Rems-Murr-Kreis",
+      "Mr. Ink Tattoo Website Screenshot – Portfolio-Darstellung für Tattoo-Künstler",
+      "Mr. Ink Tattoo Mobilansicht – responsive Webentwicklung für kleine Unternehmen",
     ],
   },
   {
@@ -77,12 +98,17 @@ const projectsMeta: {
       "/images/projects/accounting-demo-2.webp",
       "/images/projects/accounting-demo-3.webp",
     ],
+    altTexts: [
+      "Buchhaltungs-App für Freelancer – Desktop-Software mit Tauri, React und SQLite",
+      "Buchhaltungssoftware Screenshot – Rechnungen und EÜR für Einzelunternehmer",
+      "Buchhaltungs-App Auswertung – lokale Software ohne Cloud, entwickelt in Deutschland",
+    ],
   },
 ];
 
 const SLIDE_INTERVAL = 5000;
 
-function PreviewSlider({ previews, title, onImageClick }: { previews: string[]; title: string; onImageClick?: (index: number) => void }) {
+function PreviewSlider({ previews, altTexts, title, onImageClick }: { previews: string[]; altTexts: string[]; title: string; onImageClick?: (index: number) => void }) {
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState<number | null>(null);
 
@@ -115,7 +141,7 @@ function PreviewSlider({ previews, title, onImageClick }: { previews: string[]; 
           <Image
             key={src}
             src={src}
-            alt={`${title} preview ${i + 1}`}
+            alt={altTexts[i] ?? `${title} preview ${i + 1}`}
             fill
             sizes="(max-width: 1024px) 100vw, 320px"
             className="object-cover object-top"
@@ -145,7 +171,7 @@ function PreviewSlider({ previews, title, onImageClick }: { previews: string[]; 
 }
 
 /** Lightbox modal for full-size screenshot viewing. */
-function Lightbox({ previews, title, initialIndex, onClose }: { previews: string[]; title: string; initialIndex: number; onClose: () => void }) {
+function Lightbox({ previews, altTexts, title, initialIndex, onClose }: { previews: string[]; altTexts: string[]; title: string; initialIndex: number; onClose: () => void }) {
   const [current, setCurrent] = useState(initialIndex);
 
   const handleKey = useCallback((e: KeyboardEvent) => {
@@ -185,7 +211,7 @@ function Lightbox({ previews, title, initialIndex, onClose }: { previews: string
         <div className="relative w-full" style={{ aspectRatio: "16/10" }}>
           <Image
             src={previews[current]}
-            alt={`${title} screenshot ${current + 1}`}
+            alt={altTexts[current] ?? `${title} screenshot ${current + 1}`}
             fill
             sizes="100vw"
             className="object-contain rounded-lg"
@@ -233,7 +259,7 @@ export default function ProjectsSection() {
   const headerRef = useReveal();
   const gridRef = useReveal<HTMLUListElement>(0.04);
   const [activeTab, setActiveTab] = useState<ProjectType>("web");
-  const [lightbox, setLightbox] = useState<{ previews: string[]; title: string; index: number } | null>(null);
+  const [lightbox, setLightbox] = useState<{ previews: string[]; altTexts: string[]; title: string; index: number } | null>(null);
 
   const visibleItems = t.projects.items
     .map((project, i) => ({ project, meta: projectsMeta[i] }))
@@ -244,6 +270,7 @@ export default function ProjectsSection() {
     {lightbox && (
       <Lightbox
         previews={lightbox.previews}
+        altTexts={lightbox.altTexts}
         title={lightbox.title}
         initialIndex={lightbox.index}
         onClose={() => setLightbox(null)}
@@ -357,7 +384,7 @@ export default function ProjectsSection() {
                       )}
                       {meta.previews.length > 0 && meta.type === "software" && (
                         <button
-                          onClick={() => setLightbox({ previews: meta.previews, title: project.title, index: 0 })}
+                          onClick={() => setLightbox({ previews: meta.previews, altTexts: meta.altTexts, title: project.title, index: 0 })}
                           className="inline-flex items-center gap-1.5 rounded-md border border-accent/30 bg-accent/10 px-3 py-1.5 text-base font-semibold text-accent hover:bg-accent/20 hover:border-accent/60 transition-all duration-150"
                         >
                           {t.projects.viewScreenshots}
@@ -382,8 +409,9 @@ export default function ProjectsSection() {
                   <div className="relative lg:w-80 lg:shrink-0 h-52 lg:h-auto border-t lg:border-t-0 lg:border-l border-accent/10 overflow-hidden bg-primary">
                     <PreviewSlider
                       previews={meta.previews}
+                      altTexts={meta.altTexts}
                       title={project.title}
-                      onImageClick={meta.type === "software" ? (index) => setLightbox({ previews: meta.previews, title: project.title, index }) : undefined}
+                      onImageClick={meta.type === "software" ? (index) => setLightbox({ previews: meta.previews, altTexts: meta.altTexts, title: project.title, index }) : undefined}
                     />
                   </div>
                   ) : (

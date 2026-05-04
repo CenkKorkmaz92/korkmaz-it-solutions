@@ -19,7 +19,7 @@ export const translations = {
       eyebrow: "Webentwicklung & IT",
       headline: "Websites und Web-Apps",
       headlineAccent: "die Ergebnisse bringen.",
-      sub: "Ich baue schnelle, saubere Weblösungen für Selbstständige und Unternehmen. Direkt, ohne Umwege.",
+      sub: "Ich baue schnelle, saubere Websites und Web-Apps für Selbstständige und Unternehmen im Rems-Murr-Kreis, Stuttgart und Umgebung — direkt, ohne Umwege.",
       cta1: "Kontakt aufnehmen",
       cta2: "Projekte ansehen",
       techLabel: "Damit arbeite ich",
@@ -64,7 +64,7 @@ export const translations = {
     techStack: {
       eyebrow: "Technologie",
       heading: "Womit ich arbeite",
-      sub: "Moderne Technologien für stabile und skalierbare Lösungen.",
+      sub: "Next.js, React, TypeScript, Node.js, Tailwind CSS und PostgreSQL — moderne Technologien für stabile, schnelle und skalierbare Lösungen.",
       categories: ["Frontend", "Backend", "Infrastruktur"],
     },
     projects: {
@@ -207,7 +207,7 @@ export const translations = {
       eyebrow: "Freelance Web Developer",
       headline: "No middleman.",
       headlineAccent: "You talk to the developer.",
-      sub: "You talk to me — I plan it, I build it, I deliver it. No agency overhead, no getting lost in translation.",
+      sub: "I build fast, clean websites and web apps for freelancers and businesses in the Stuttgart and Rems-Murr region — no middleman, no agency overhead.",
       cta1: "Get in Touch",
       cta2: "View Projects",
       techLabel: "What I work with",

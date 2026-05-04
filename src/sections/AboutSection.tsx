@@ -43,7 +43,7 @@ export default function AboutSection() {
             >
               <Image
                 src="/images/profile-default.webp"
-                alt="Cenk Korkmaz"
+                alt="Cenk Korkmaz – Freelance Webentwickler aus dem Rems-Murr-Kreis"
                 fill
                 className="object-cover object-top"
               />
