@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
@@ -14,6 +15,7 @@ export default function AboutSection() {
   const headerRef = useReveal();
   const bioRef = useReveal();
   const valuesRef = useReveal();
+  const [hovered, setHovered] = useState(false);
 
   return (
     <section id="about" aria-label="About" className="relative bg-primary overflow-hidden fade-to-surface">
@@ -35,20 +37,24 @@ export default function AboutSection() {
           <div ref={bioRef} className="reveal grid grid-cols-1 gap-10 sm:grid-cols-[auto_1fr] sm:gap-14 sm:items-start">
 
             {/* Profile image */}
-            <div className="group relative w-56 h-56 sm:w-64 sm:h-64 flex-shrink-0 rounded-2xl overflow-hidden cursor-default ring-1 ring-white/5 shadow-[0_0_40px_rgba(0,212,255,0.07)] transition-all duration-500 hover:shadow-[0_0_56px_rgba(0,212,255,0.2)] hover:ring-accent/30 mx-auto sm:mx-0">
+            <div
+              className="group relative w-56 h-56 sm:w-64 sm:h-64 flex-shrink-0 rounded-2xl overflow-hidden cursor-default ring-1 ring-white/5 shadow-[0_0_40px_rgba(0,212,255,0.07)] transition-all duration-500 hover:shadow-[0_0_56px_rgba(0,212,255,0.2)] hover:ring-accent/30 mx-auto sm:mx-0"
+              onMouseEnter={() => setHovered(true)}
+            >
               <Image
                 src="/images/profile-default.webp"
                 alt="Cenk Korkmaz"
                 fill
                 className="object-cover object-top"
               />
-              <Image
-                src="/images/profile-hover.webp"
-                alt=""
-                fill
-                loading="lazy"
-                className="object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
-              />
+              {hovered && (
+                <Image
+                  src="/images/profile-hover.webp"
+                  alt=""
+                  fill
+                  className="object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                />
+              )}
             </div>
 
             {/* Text + socials */}
