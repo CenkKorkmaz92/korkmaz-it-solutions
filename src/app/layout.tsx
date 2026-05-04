@@ -29,30 +29,66 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://korkmaz-it-solutions.com"),
 
   title: {
-    default: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
+    default: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
     template: "%s | Korkmaz IT Solutions",
   },
 
   description:
-    "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — direkt mit dem Entwickler, ohne Agentur-Overhead.",
+    "Freelance Webentwickler & IT-Dienstleister, bundesweit remote tätig. Aus dem Rems-Murr-Kreis für Kunden in ganz Deutschland — Stuttgart, Berlin, Hamburg, München, Frankfurt und überall sonst. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup. Direkt mit dem Entwickler, ohne Agentur-Overhead.",
 
   keywords: [
-    "Freelance Webentwickler",
-    "Webentwickler Deutschland",
+    // Lokal (Rems-Murr-Kreis & Region Stuttgart)
+    "Freelance Webentwickler Stuttgart",
+    "Webentwickler Stuttgart",
+    "Webentwickler Esslingen",
+    "Webentwickler Nürtingen",
+    "Webentwickler Backnang",
+    "Webentwickler Waiblingen",
+    "Webentwickler Schorndorf",
+    "Webentwickler Winnenden",
+    "Webentwickler Rems-Murr-Kreis",
+    "Webentwickler Sulzbach an der Murr",
+    "Webentwickler Region Stuttgart",
+    "Webentwickler Kreis Esslingen",
+    "Webentwickler Göppingen",
+    "Webentwickler Ludwigsburg",
+    "Webentwickler Heidelberg",
+    "Webentwickler Karlsruhe",
+    "Webentwickler Mannheim",
+    "Webentwickler Heilbronn",
+    "Webentwickler Ulm",
+    "Webentwickler Freiburg",
+    // Bundesweit — Großstädte
+    "Webentwickler Berlin",
+    "Webentwickler Hamburg",
+    "Webentwickler München",
+    "Webentwickler Frankfurt",
+    "Webentwickler Köln",
+    "Webentwickler Düsseldorf",
+    "Webentwickler Dörtmund",
+    "Webentwickler Leipzig",
+    "Webentwickler Nürnberg",
+    "Webentwickler Bremen",
+    // Remote / bundesweit allgemein
+    "Freelance Webentwickler remote",
+    "Freelance Webentwickler Deutschland",
+    "Webentwickler remote",
+    "Webentwickler bundesweit",
+    "Webseite erstellen lassen Deutschland",
     "Webseite erstellen lassen",
-    "Web App entwickeln",
-    "IT-Dienstleister",
-    "IT-Beratung",
+    "IT-Dienstleister Deutschland",
+    "IT-Dienstleister Stuttgart",
+    "IT-Beratung remote",
+    "Web App entwickeln Deutschland",
     "Next.js Entwickler",
     "React Entwickler",
     "TypeScript Entwickler",
-    "Domain Migration",
-    "E-Mail Migration",
+    "Freelance Webentwickler",
+    // Spezifisch
     "Buchhaltungssoftware Freelancer",
+    "Einzelunternehmer Software",
     "Korkmaz IT Solutions",
     "Cenk Korkmaz",
-    "Freelancer Website",
-    "Einzelunternehmer Software",
   ],
 
   authors: [{ name: "Cenk Korkmaz", url: "https://korkmaz-it-solutions.com" }],
@@ -65,17 +101,17 @@ export const metadata: Metadata = {
     alternateLocale: "en_GB",
     url: "https://korkmaz-it-solutions.com",
     siteName: "Korkmaz IT Solutions",
-    title: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
+    title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
     description:
-      "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
+      "Freelance Webentwickler & IT-Dienstleister aus dem Rems-Murr-Kreis — Sulzbach an der Murr, Stuttgart, Esslingen, Nürtingen, Backnang. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
     images: [{ url: "/OG-image-SEO.png", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
+    title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
     description:
-      "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — direkt mit dem Entwickler.",
+      "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — Rems-Murr-Kreis, Stuttgart, Esslingen, Nürtingen, Backnang.",
     images: ["/OG-image-SEO.png"],
     creator: "@cenkkorkmaz",
   },
@@ -93,6 +129,14 @@ export const metadata: Metadata = {
         url: "/site.webmanifest",
       },
     ],
+  },
+
+  alternates: {
+    canonical: "https://korkmaz-it-solutions.com",
+    languages: {
+      "de": "https://korkmaz-it-solutions.com",
+      "en": "https://korkmaz-it-solutions.com",
+    },
   },
 
   robots: {
@@ -119,35 +163,96 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "Korkmaz IT Solutions",
-              url: "https://korkmaz-it-solutions.com",
-              email: "info@korkmaz-it-solutions.com",
-              founder: {
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Korkmaz IT Solutions",
+                url: "https://korkmaz-it-solutions.com",
+                inLanguage: ["de", "en"],
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://korkmaz-it-solutions.com/#contact",
+                },
+              },
+              {
+                "@context": "https://schema.org",
                 "@type": "Person",
                 name: "Cenk Korkmaz",
                 jobTitle: "Freelance Webentwickler & IT-Dienstleister",
                 url: "https://korkmaz-it-solutions.com",
+                email: "info@korkmaz-it-solutions.com",
+                address: {
+                  "@type": "PostalAddress",
+                  postalCode: "71560",
+                  addressLocality: "Sulzbach an der Murr",
+                  addressRegion: "Baden-Württemberg",
+                  addressCountry: "DE",
+                },
+                knowsLanguage: ["de", "en"],
+                sameAs: ["https://korkmaz-it-solutions.com"],
               },
-              description:
-                "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
-              areaServed: {
-                "@type": "Country",
-                name: "Germany",
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                name: "Korkmaz IT Solutions",
+                url: "https://korkmaz-it-solutions.com",
+                email: "info@korkmaz-it-solutions.com",
+                founder: {
+                  "@type": "Person",
+                  name: "Cenk Korkmaz",
+                },
+                description:
+                  "Freelance Webentwickler & IT-Dienstleister aus dem Rems-Murr-Kreis (Sulzbach an der Murr). Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
+                address: {
+                  "@type": "PostalAddress",
+                  postalCode: "71560",
+                  addressLocality: "Sulzbach an der Murr",
+                  addressRegion: "Baden-Württemberg",
+                  addressCountry: "DE",
+                },
+                areaServed: [
+                  // Lokal (Heimatregion)
+                  { "@type": "City", name: "Sulzbach an der Murr" },
+                  { "@type": "AdministrativeArea", name: "Rems-Murr-Kreis" },
+                  { "@type": "City", name: "Stuttgart" },
+                  { "@type": "City", name: "Esslingen am Neckar" },
+                  { "@type": "City", name: "Nürtingen" },
+                  { "@type": "City", name: "Backnang" },
+                  { "@type": "City", name: "Waiblingen" },
+                  { "@type": "City", name: "Schorndorf" },
+                  { "@type": "City", name: "Winnenden" },
+                  { "@type": "City", name: "Göppingen" },
+                  { "@type": "City", name: "Ludwigsburg" },
+                  // Baden-Württemberg
+                  { "@type": "City", name: "Karlsruhe" },
+                  { "@type": "City", name: "Mannheim" },
+                  { "@type": "City", name: "Heidelberg" },
+                  { "@type": "City", name: "Heilbronn" },
+                  { "@type": "City", name: "Ulm" },
+                  { "@type": "City", name: "Freiburg im Breisgau" },
+                  { "@type": "State", name: "Baden-Württemberg" },
+                  // Bundesweit
+                  { "@type": "City", name: "Berlin" },
+                  { "@type": "City", name: "Hamburg" },
+                  { "@type": "City", name: "München" },
+                  { "@type": "City", name: "Frankfurt am Main" },
+                  { "@type": "City", name: "Köln" },
+                  { "@type": "City", name: "Düsseldorf" },
+                  { "@type": "Country", name: "Germany" },
+                ],
+                serviceType: [
+                  "Webentwicklung",
+                  "Web App Entwicklung",
+                  "IT-Beratung",
+                  "Domain Migration",
+                  "E-Mail Migration",
+                  "Software Entwicklung",
+                ],
+                knowsLanguage: ["de", "en"],
+                inLanguage: "de",
               },
-              serviceType: [
-                "Webentwicklung",
-                "Web App Entwicklung",
-                "IT-Beratung",
-                "Domain Migration",
-                "E-Mail Migration",
-                "Software Entwicklung",
-              ],
-              knowsLanguage: ["de", "en"],
-              inLanguage: "de",
-            }),
+            ]),
           }}
         />
       </head>

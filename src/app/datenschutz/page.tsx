@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Datenschutz",
   description: "Privacy policy for Korkmaz IT Solutions.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "https://korkmaz-it-solutions.com/datenschutz" },
 };
 
 export default function DatenschutzPage() {

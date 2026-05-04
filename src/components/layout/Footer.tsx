@@ -51,7 +51,7 @@ export default function Footer() {
               className="flex items-center gap-3 text-base font-semibold tracking-tight text-accent hover:text-accent/80 transition-colors group w-fit"
             >
               <Image 
-                src="/icon.png" 
+                src="/android-chrome-192x192.png" 
                 alt="Korkmaz IT Solutions Logo" 
                 width={28} 
                 height={28}

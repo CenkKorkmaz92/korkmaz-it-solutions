@@ -35,9 +35,9 @@ export const translations = {
             "Individuelle Websites und Web-Apps – schnell, responsive und auf dein Business abgestimmt.",
         },
         {
-          title: "Performance",
+          title: "Performance & SEO",
           description:
-            "Optimierte Ladezeiten, saubere Struktur und starke Nutzererfahrung.",
+            "Optimierte Ladezeiten, saubere Code-Struktur und Suchmaschinenoptimierung — damit deine Website schnell lädt und bei Google gefunden wird.",
         },
         {
           title: "Automatisierung",
@@ -223,9 +223,9 @@ export const translations = {
             "Individual websites and web apps — fast, responsive and tailored to your business.",
         },
         {
-          title: "Performance",
+          title: "Performance & SEO",
           description:
-            "Optimised load times, clean structure and a strong user experience.",
+            "Optimised load times, clean code structure and search engine optimisation — so your site loads fast and gets found on Google.",
         },
         {
           title: "Automation",

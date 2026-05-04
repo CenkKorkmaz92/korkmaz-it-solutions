@@ -10,6 +10,10 @@ import ContactCtaSection from "@/sections/ContactCtaSection";
 export const metadata: Metadata = {
   alternates: {
     canonical: "https://korkmaz-it-solutions.com",
+    languages: {
+      "de": "https://korkmaz-it-solutions.com",
+      "en": "https://korkmaz-it-solutions.com",
+    },
   },
 };
 

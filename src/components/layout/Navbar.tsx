@@ -116,7 +116,7 @@ export default function Navbar() {
             className="flex items-center gap-3 text-secondary text-base sm:text-lg font-semibold tracking-tight hover:text-accent transition-colors group"
           >
             <Image 
-              src="/icon.png" 
+              src="/android-chrome-192x192.png" 
               alt="Korkmaz IT Solutions Logo" 
               width={32} 
               height={32}

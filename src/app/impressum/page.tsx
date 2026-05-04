@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Impressum",
   description: "Legal notice for Korkmaz IT Solutions.",
   robots: { index: false, follow: false },
+  alternates: { canonical: "https://korkmaz-it-solutions.com/impressum" },
 };
 
 export default function ImpressumPage() {
