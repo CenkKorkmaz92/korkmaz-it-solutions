@@ -41,12 +41,12 @@ export default function AboutSection() {
                 alt="Cenk Korkmaz"
                 fill
                 className="object-cover object-top"
-                priority
               />
               <Image
                 src="/images/profile-hover.webp"
                 alt=""
                 fill
+                loading="lazy"
                 className="object-cover object-top opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
               />
             </div>

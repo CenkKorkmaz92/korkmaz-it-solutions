@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
     description:
       "Freelance Webentwickler & IT-Dienstleister aus dem Rems-Murr-Kreis — Sulzbach an der Murr, Stuttgart, Esslingen, Nürtingen, Backnang. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
-    images: [{ url: "/OG-image-SEO.png", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
+    images: [{ url: "/OG-image-SEO.jpg", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
   },
 
   twitter: {
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
     title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
     description:
       "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — Rems-Murr-Kreis, Stuttgart, Esslingen, Nürtingen, Backnang.",
-    images: ["/OG-image-SEO.png"],
+    images: ["/OG-image-SEO.jpg"],
     creator: "@cenkkorkmaz",
   },
 
