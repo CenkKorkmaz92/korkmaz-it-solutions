@@ -38,7 +38,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="relative bg-surface text-secondary overflow-hidden">
+    <footer id="footer" className="relative bg-surface text-secondary overflow-hidden">
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <Container>
         <div className="relative z-10 py-14 sm:py-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">

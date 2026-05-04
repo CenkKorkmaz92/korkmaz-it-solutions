@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
@@ -12,8 +12,18 @@ import { useReveal } from "@/hooks/useReveal";
  * Order must match the `t.projects.items` array in translations.
  * Place screenshots in /public/images/projects/ named e.g. portfolio-preview-1.webp
  */
-const projectsMeta = [
+type ProjectType = "web" | "software";
+
+const projectsMeta: {
+  type: ProjectType;
+  tags: string[];
+  liveHref: string;
+  comingSoon: boolean;
+  ownProduct?: boolean;
+  previews: string[];
+}[] = [
   {
+    type: "web",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
     liveHref: "https://korkmaz-it-solutions.com/projects/portfolio/",
     comingSoon: false,
@@ -24,6 +34,7 @@ const projectsMeta = [
     ],
   },
   {
+    type: "web",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     liveHref: "https://korkmaz-it-solutions.com/projects/online-cv/",
     comingSoon: false,
@@ -34,6 +45,7 @@ const projectsMeta = [
     ],
   },
   {
+    type: "web",
     tags: ["Angular", "TypeScript", "SCSS", "RxJS"],
     liveHref: "https://korkmaz-it-solutions.com/projects/madame_pearls/",
     comingSoon: true,
@@ -44,6 +56,7 @@ const projectsMeta = [
     ],
   },
   {
+    type: "web",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     liveHref: "https://korkmaz-it-solutions.com/projects/mr_ink_tattoo/",
     comingSoon: false,
@@ -53,11 +66,23 @@ const projectsMeta = [
       "/images/projects/mr-ink-preview-3.webp",
     ],
   },
+  {
+    type: "software",
+    tags: ["Tauri", "React", "TypeScript", "SQLite", "Rust"],
+    liveHref: "",
+    comingSoon: true,
+    ownProduct: true,
+    previews: [
+      "/images/projects/accounting-demo-1.webp",
+      "/images/projects/accounting-demo-2.webp",
+      "/images/projects/accounting-demo-3.webp",
+    ],
+  },
 ];
 
 const SLIDE_INTERVAL = 5000;
 
-function PreviewSlider({ previews, title }: { previews: string[]; title: string }) {
+function PreviewSlider({ previews, title, onImageClick }: { previews: string[]; title: string; onImageClick?: (index: number) => void }) {
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState<number | null>(null);
 
@@ -77,7 +102,12 @@ function PreviewSlider({ previews, title }: { previews: string[]; title: string 
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div
+      className={`relative w-full h-full${onImageClick ? " cursor-zoom-in" : ""}`}
+      onClick={onImageClick ? () => onImageClick(current) : undefined}
+      role={onImageClick ? "button" : undefined}
+      aria-label={onImageClick ? `${title} vergrößern` : undefined}
+    >
       {previews.map((src, i) => {
         const isActive = i === current;
         const isPrev = i === prev;
@@ -102,7 +132,7 @@ function PreviewSlider({ previews, title }: { previews: string[]; title: string 
         {previews.map((_, i) => (
           <button
             key={i}
-            onClick={() => handleDot(i)}
+            onClick={(e) => { e.stopPropagation(); handleDot(i); }}
             aria-label={`Show preview ${i + 1}`}
             className={`h-1.5 rounded-full transition-all duration-300 ${
               i === current ? "bg-accent w-3" : "bg-accent/30 w-1.5"
@@ -114,12 +144,111 @@ function PreviewSlider({ previews, title }: { previews: string[]; title: string 
   );
 }
 
-/** Projects section — grid of project cards with tags, GitHub and live links. */
+/** Lightbox modal for full-size screenshot viewing. */
+function Lightbox({ previews, title, initialIndex, onClose }: { previews: string[]; title: string; initialIndex: number; onClose: () => void }) {
+  const [current, setCurrent] = useState(initialIndex);
+
+  const handleKey = useCallback((e: KeyboardEvent) => {
+    if (e.key === "Escape") onClose();
+    if (e.key === "ArrowRight") setCurrent((c) => (c + 1) % previews.length);
+    if (e.key === "ArrowLeft") setCurrent((c) => (c - 1 + previews.length) % previews.length);
+  }, [onClose, previews.length]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "";
+    };
+  }, [handleKey]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="relative max-w-5xl w-full mx-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close */}
+        <button
+          onClick={onClose}
+          aria-label="Schließen"
+          className="absolute -top-10 right-0 text-secondary/50 hover:text-secondary transition-colors text-2xl font-light leading-none"
+        >
+          ✕
+        </button>
+
+        {/* Image */}
+        <div className="relative w-full" style={{ aspectRatio: "16/10" }}>
+          <Image
+            src={previews[current]}
+            alt={`${title} screenshot ${current + 1}`}
+            fill
+            sizes="100vw"
+            className="object-contain rounded-lg"
+            priority
+          />
+        </div>
+
+        {/* Nav */}
+        {previews.length > 1 && (
+          <div className="flex items-center justify-between mt-4">
+            <button
+              onClick={() => setCurrent((c) => (c - 1 + previews.length) % previews.length)}
+              className="px-4 py-2 rounded-md border border-accent/20 text-accent/60 hover:text-accent hover:border-accent/50 transition-all"
+            >
+              ←
+            </button>
+            <div className="flex gap-2">
+              {previews.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Screenshot ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === current ? "bg-accent w-6" : "bg-accent/30 w-3"
+                  }`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={() => setCurrent((c) => (c + 1) % previews.length)}
+              className="px-4 py-2 rounded-md border border-accent/20 text-accent/60 hover:text-accent hover:border-accent/50 transition-all"
+            >
+              →
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
 export default function ProjectsSection() {
   const t = useTranslation();
   const headerRef = useReveal();
   const gridRef = useReveal<HTMLUListElement>(0.04);
+  const [activeTab, setActiveTab] = useState<ProjectType>("web");
+  const [lightbox, setLightbox] = useState<{ previews: string[]; title: string; index: number } | null>(null);
+
+  const visibleItems = t.projects.items
+    .map((project, i) => ({ project, meta: projectsMeta[i] }))
+    .filter(({ meta }) => meta.type === activeTab);
+
   return (
+    <>
+    {lightbox && (
+      <Lightbox
+        previews={lightbox.previews}
+        title={lightbox.title}
+        initialIndex={lightbox.index}
+        onClose={() => setLightbox(null)}
+      />
+    )}
     <section id="projects" aria-label="Projects" className="relative bg-surface overflow-hidden fade-to-surface">
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <Container>
@@ -137,21 +266,61 @@ export default function ProjectsSection() {
             </p>
           </div>
 
+          {/* Tab toggle */}
+          <div className="flex gap-2 mb-8">
+            <button
+              onClick={() => setActiveTab("web")}
+              className={`relative px-5 py-2 rounded-md text-base font-semibold transition-all duration-150 border ${
+                activeTab === "web"
+                  ? "bg-accent/15 border-accent/50 text-accent"
+                  : "bg-transparent border-accent/15 text-secondary/40 hover:border-accent/30 hover:text-secondary/60"
+              }`}
+            >
+              {activeTab !== "web" && (
+                <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
+                </span>
+              )}
+              {t.projects.tabWeb}
+            </button>
+            <button
+              onClick={() => setActiveTab("software")}
+              className={`relative px-5 py-2 rounded-md text-base font-semibold transition-all duration-150 border ${
+                activeTab === "software"
+                  ? "bg-accent/15 border-accent/50 text-accent"
+                  : "bg-transparent border-accent/15 text-secondary/40 hover:border-accent/30 hover:text-secondary/60"
+              }`}
+            >
+              {activeTab !== "software" && (
+                <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
+                </span>
+              )}
+              {t.projects.tabSoftware}
+            </button>
+          </div>
+
           <ul ref={gridRef} className="reveal grid grid-cols-1 gap-6">
-            {t.projects.items.map((project, i) => {
-              const meta = projectsMeta[i];
-              return (
+            {visibleItems.map(({ project, meta }) => (
                 <li
                   key={project.title}
                   className="group/card cyber-card flex flex-col lg:flex-row rounded-xl hover:-translate-y-1 transition-transform duration-200 ease-out"
-                  style={{ "--delay": `${i * 100}ms` } as React.CSSProperties}
                 >
                   {/* Content — left side */}
                   <div className="flex-1 flex flex-col justify-between p-7">
                     <div>
-                      <h3 className="text-base font-semibold text-secondary mb-3 link-underline w-fit group-hover/card:after:w-full">
-                        {project.title}
-                      </h3>
+                      <div className="flex items-center gap-3 mb-3 flex-wrap">
+                        <h3 className="text-base font-semibold text-secondary link-underline w-fit group-hover/card:after:w-full">
+                          {project.title}
+                        </h3>
+                        {meta.ownProduct && (
+                          <span className="text-xs font-semibold uppercase tracking-widest border border-accent/30 text-accent/70 px-2 py-0.5 rounded-sm">
+                            {t.projects.ownProduct}
+                          </span>
+                        )}
+                      </div>
                       <p className="text-base text-secondary/50 leading-relaxed">
                         {project.description}
                       </p>
@@ -186,6 +355,14 @@ export default function ProjectsSection() {
                           {t.projects.viewLive}
                         </Link>
                       )}
+                      {meta.previews.length > 0 && meta.type === "software" && (
+                        <button
+                          onClick={() => setLightbox({ previews: meta.previews, title: project.title, index: 0 })}
+                          className="inline-flex items-center gap-1.5 rounded-md border border-accent/30 bg-accent/10 px-3 py-1.5 text-base font-semibold text-accent hover:bg-accent/20 hover:border-accent/60 transition-all duration-150"
+                        >
+                          {t.projects.viewScreenshots}
+                        </button>
+                      )}
                       {meta.comingSoon && (
                         <span
                           className="inline-flex items-center gap-1.5 rounded-sm px-3 py-1.5 text-base font-bold text-yellow-300 uppercase tracking-wide"
@@ -201,15 +378,28 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Preview — right side */}
+                  {meta.previews.length > 0 ? (
                   <div className="relative lg:w-80 lg:shrink-0 h-52 lg:h-auto border-t lg:border-t-0 lg:border-l border-accent/10 overflow-hidden bg-primary">
-                    <PreviewSlider previews={meta.previews} title={project.title} />
+                    <PreviewSlider
+                      previews={meta.previews}
+                      title={project.title}
+                      onImageClick={meta.type === "software" ? (index) => setLightbox({ previews: meta.previews, title: project.title, index }) : undefined}
+                    />
                   </div>
+                  ) : (
+                  <div
+                    className="relative lg:w-80 lg:shrink-0 h-52 lg:h-auto border-t lg:border-t-0 lg:border-l border-accent/10 overflow-hidden flex items-center justify-center"
+                    style={{ background: "repeating-linear-gradient(45deg, #080c18 0px, #080c18 12px, #0d1220 12px, #0d1220 24px)" }}
+                  >
+                    <span className="text-accent/25 text-xs font-semibold uppercase tracking-widest px-4 text-center">Screenshots coming soon</span>
+                  </div>
+                  )}
                 </li>
-              );
-            })}
+            ))}
           </ul>
         </div>
       </Container>
     </section>
+    </>
   );
 }

@@ -75,7 +75,7 @@ export default function ContactCtaSection() {
     "w-full rounded-md bg-white/5 border border-accent/20 px-4 py-3 text-base text-secondary placeholder:text-secondary/30 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors";
 
   return (
-    <section id="get-in-touch" aria-label="Contact" className="relative bg-primary overflow-hidden cyber-scanline fade-to-surface">
+    <section id="contact" aria-label="Contact" className="relative bg-primary overflow-hidden cyber-scanline fade-to-surface" style={{ scrollMarginTop: "80px" }}>
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <div
         className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"

@@ -49,6 +49,16 @@ export const translations = {
           description:
             "Klare Empfehlungen statt Technik-Blabla – ich sage dir, was wirklich Sinn macht.",
         },
+        {
+          title: "Domain & Hosting",
+          description:
+            "Domain-Wechsel, DNS-Konfiguration und Hosting-Einrichtung – ich übernehme die technischen Schritte, damit deine Domain sicher und schnell erreichbar ist.",
+        },
+        {
+          title: "E-Mail Migration",
+          description:
+            "Ich migriere deine E-Mail-Postfächer zu einem neuen Anbieter – zuverlässig, ohne Datenverlust und mit minimalem Ausfall.",
+        },
       ],
     },
     techStack: {
@@ -59,8 +69,8 @@ export const translations = {
     },
     projects: {
       eyebrow: "Projekte",
-      heading: "Was ich gebaut habe",
-      sub: "Echte Projekte, echter Code.",
+      heading: "Beispiele aus meiner Arbeit",
+      sub: "Websites, Apps und Software – ausgewählte Projekte aus meiner täglichen Arbeit.",
       items: [
         {
           title: "Beispiel Portfolio-Seite",
@@ -82,9 +92,18 @@ export const translations = {
           description:
             "Ohne starke Online-Präsenz gehen Tattoo-Studios an Google vorbei. Diese Website zeigt Arbeiten, stellt Künstler vor und ermöglicht Kontaktaufnahme – zweisprachig, mobil optimiert und auf neue Kunden ausgerichtet.",
         },
+        {
+          title: "Buchhaltungs-App",
+          description:
+            "Buchhaltung ohne Abo, ohne Cloud, ohne Datenweitergabe. Die App l\u00e4uft lokal auf deinem Rechner \u2013 deine Zahlen bleiben bei dir. Rechnungen erstellen, Einnahmen und Ausgaben erfassen, E\u00dcR und Steuerr\u00fccklagen automatisch berechnen, wiederkehrende Buchungen automatisieren. Der Export f\u00fcr den Steuerberater wird in Zusammenarbeit mit einer Steuerberaterin gepr\u00fcft und optimiert \u2013 damit du deine Unterlagen mit einem Klick \u00fcbergeben kannst. Entwickelt speziell f\u00fcr Freelancer und Einzelunternehmer in Deutschland (\u00a719 und Regelbesteuerung). Kommt demn\u00e4chst: integrierter KI-Assistent, der lokal auf deinen Daten arbeitet \u2013 ohne dass eine einzige Zahl nach au\u00dfen gelangt. Work in Progress.",
+        },
       ],
       viewLive: "Live ansehen",
       comingSoon: "In Entwicklung",
+      tabWeb: "Webprojekte",
+      tabSoftware: "Software",
+      ownProduct: "Eigenentwicklung",
+      viewScreenshots: "Screenshots ansehen",
     },
     about: {
       eyebrow: "Über mich",
@@ -218,6 +237,16 @@ export const translations = {
           description:
             "Clear recommendations instead of tech jargon — I tell you what actually makes sense.",
         },
+        {
+          title: "Domain & Hosting",
+          description:
+            "Domain transfers, DNS configuration and hosting setup — I handle the technical steps so your domain is secure and reachable fast.",
+        },
+        {
+          title: "Email Migration",
+          description:
+            "I migrate your email mailboxes to a new provider — reliably, without data loss and with minimal downtime.",
+        },
       ],
     },
     techStack: {
@@ -228,8 +257,8 @@ export const translations = {
     },
     projects: {
       eyebrow: "Projects",
-      heading: "What I've Built",
-      sub: "Real projects, real code.",
+      heading: "Examples from My Work",
+      sub: "Websites, apps and software — selected projects from my day-to-day work.",
       items: [
         {
           title: "Example Portfolio Site",
@@ -251,9 +280,18 @@ export const translations = {
           description:
             "Without a strong online presence, tattoo studios miss out on Google searches. This site showcases work, introduces artists, and makes contact easy — bilingual, mobile-optimised, and built to attract new clients.",
         },
+        {
+          title: "Accounting App",
+          description:
+            "Bookkeeping without a subscription, without a cloud, without handing your data to anyone. The app runs locally on your machine \u2014 your numbers stay with you. Create invoices, track income and expenses, automatically calculate your annual surplus (E\u00dcR) and tax reserves, and automate recurring entries. The tax consultant export is being reviewed and optimised in collaboration with a certified tax advisor \u2014 so you can hand over your records with a single click. Built specifically for freelancers and sole traders in Germany (\u00a719 and standard taxation). Coming soon: a built-in AI assistant that works entirely on your local data \u2014 nothing leaves your machine. Work in progress.",
+        },
       ],
       viewLive: "View Live",
       comingSoon: "In Progress",
+      tabWeb: "Web Projects",
+      tabSoftware: "Software",
+      ownProduct: "Own Product",
+      viewScreenshots: "View Screenshots",
     },
     about: {
       eyebrow: "About",

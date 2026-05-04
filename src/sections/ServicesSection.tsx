@@ -28,7 +28,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Service cards */}
-          <ul ref={gridRef} className="reveal grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <ul ref={gridRef} className="reveal grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.services.items.map((service, i) => (
               <li
                 key={service.title}
