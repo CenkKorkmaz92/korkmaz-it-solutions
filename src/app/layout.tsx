@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Freelance Webentwickler & IT-Dienstleister, bundesweit remote tätig. Aus dem Rems-Murr-Kreis für Kunden in ganz Deutschland — Stuttgart, Berlin, Hamburg, München, Frankfurt und überall sonst. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup. Direkt mit dem Entwickler, ohne Agentur-Overhead.",
+    "Freelance Webentwickler aus dem Rems-Murr-Kreis. Individuelle Websites, Web-Apps und IT-Lösungen — direkt mit dem Entwickler, ohne Agentur-Overhead. Bundesweit remote tätig.",
 
   keywords: [
     // Lokal (Rems-Murr-Kreis & Region Stuttgart)
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     siteName: "Korkmaz IT Solutions",
     title: "Korkmaz IT Solutions — Webentwickler Rems-Murr-Kreis & Region Stuttgart",
     description:
-      "Freelance Webentwickler & IT-Dienstleister aus dem Rems-Murr-Kreis — Sulzbach an der Murr, Stuttgart, Esslingen, Nürtingen, Backnang. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
+      "Freelance Webentwickler aus dem Rems-Murr-Kreis. Individuelle Websites, Web-Apps und IT-Lösungen — direkt mit dem Entwickler, ohne Agentur-Overhead.",
     images: [{ url: "/OG-image-SEO.jpg", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
   },
 
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Korkmaz IT Solutions — Webentwickler Rems-Murr-Kreis & Region Stuttgart",
     description:
-      "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — Rems-Murr-Kreis, Stuttgart, Esslingen, Nürtingen, Backnang.",
+      "Individuelle Websites, Web-Apps und IT-Lösungen aus dem Rems-Murr-Kreis — direkt mit dem Entwickler.",
     images: ["/OG-image-SEO.jpg"],
     creator: "@cenkkorkmaz",
   },

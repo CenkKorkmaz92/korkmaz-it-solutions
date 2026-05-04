@@ -32,32 +32,32 @@ export const translations = {
         {
           title: "Webentwicklung",
           description:
-            "Individuelle Websites und Web-Apps – schnell, responsive und auf dein Business abgestimmt.",
+            "Landing Pages, Unternehmenswebsites und Web-Apps mit React, Next.js und TypeScript — schnell, mobiloptimiert und direkt auf dein Business zugeschnitten.",
         },
         {
           title: "Performance & SEO",
           description:
-            "Optimierte Ladezeiten, saubere Code-Struktur und Suchmaschinenoptimierung — damit deine Website schnell lädt und bei Google gefunden wird.",
+            "Core Web Vitals, Ladezeit-Optimierung, strukturierte Daten und technisches SEO — damit deine Website bei Google sichtbar ist und Besucher nicht abspringen.",
         },
         {
           title: "Automatisierung",
           description:
-            "Formulare, APIs und Prozesse, die dir Zeit sparen und Arbeit abnehmen.",
+            "Kontaktformulare, Buchungsprozesse, API-Anbindungen und interne Tools — repetitive Abläufe automatisiert, damit du dich aufs Wesentliche konzentrieren kannst.",
         },
         {
           title: "Beratung",
           description:
-            "Klare Empfehlungen statt Technik-Blabla – ich sage dir, was wirklich Sinn macht.",
+            "Technologie-Auswahl, Projektplanung und ehrliche Einschätzung — ich sage dir, was für dein Vorhaben wirklich sinnvoll ist, bevor du investierst.",
         },
         {
           title: "Domain & Hosting",
           description:
-            "Domain-Wechsel, DNS-Konfiguration und Hosting-Einrichtung – ich übernehme die technischen Schritte, damit deine Domain sicher und schnell erreichbar ist.",
+            "Domain-Wechsel, DNS-Setup, SSL-Zertifikate und Hosting-Konfiguration — ich richte alles ein, damit deine Website zuverlässig erreichbar ist.",
         },
         {
           title: "E-Mail Migration",
           description:
-            "Ich migriere deine E-Mail-Postfächer zu einem neuen Anbieter – zuverlässig, ohne Datenverlust und mit minimalem Ausfall.",
+            "Umzug von Postfächern zu Google Workspace, Microsoft 365 oder anderen Anbietern — inklusive DNS-Einrichtung, ohne Datenverlust und mit minimalem Ausfall.",
         },
       ],
     },
@@ -220,32 +220,32 @@ export const translations = {
         {
           title: "Web Development",
           description:
-            "Individual websites and web apps — fast, responsive and tailored to your business.",
+            "Landing pages, business websites and web apps built with React, Next.js and TypeScript — fast, mobile-optimised and tailored to your business.",
         },
         {
           title: "Performance & SEO",
           description:
-            "Optimised load times, clean code structure and search engine optimisation — so your site loads fast and gets found on Google.",
+            "Core Web Vitals, load time optimisation, structured data and technical SEO — so your site ranks on Google and keeps visitors engaged.",
         },
         {
           title: "Automation",
           description:
-            "Forms, APIs and processes that save you time and take work off your plate.",
+            "Contact forms, booking flows, API integrations and internal tools — repetitive tasks automated so you can focus on what matters.",
         },
         {
           title: "Consulting",
           description:
-            "Clear recommendations instead of tech jargon — I tell you what actually makes sense.",
+            "Tech stack selection, project scoping and honest assessment — I tell you what actually makes sense for your project before you commit.",
         },
         {
           title: "Domain & Hosting",
           description:
-            "Domain transfers, DNS configuration and hosting setup — I handle the technical steps so your domain is secure and reachable fast.",
+            "Domain transfers, DNS setup, SSL certificates and hosting configuration — I get everything running so your site stays reliably online.",
         },
         {
           title: "Email Migration",
           description:
-            "I migrate your email mailboxes to a new provider — reliably, without data loss and with minimal downtime.",
+            "Moving mailboxes to Google Workspace, Microsoft 365 or other providers — including DNS setup, no data loss and minimal downtime.",
         },
       ],
     },
