@@ -29,22 +29,30 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://korkmaz-it-solutions.com"),
 
   title: {
-    default: "Korkmaz IT Solutions",
+    default: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
     template: "%s | Korkmaz IT Solutions",
   },
 
   description:
-    "Korkmaz IT Solutions delivers professional web development, IT consulting and digital solutions for businesses. Founded by Cenk Korkmaz — modern, scalable software built with precision.",
+    "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — direkt mit dem Entwickler, ohne Agentur-Overhead.",
 
   keywords: [
-    "web development",
-    "IT consulting",
-    "software development",
-    "Next.js",
-    "TypeScript",
-    "digital solutions",
+    "Freelance Webentwickler",
+    "Webentwickler Deutschland",
+    "Webseite erstellen lassen",
+    "Web App entwickeln",
+    "IT-Dienstleister",
+    "IT-Beratung",
+    "Next.js Entwickler",
+    "React Entwickler",
+    "TypeScript Entwickler",
+    "Domain Migration",
+    "E-Mail Migration",
+    "Buchhaltungssoftware Freelancer",
     "Korkmaz IT Solutions",
     "Cenk Korkmaz",
+    "Freelancer Website",
+    "Einzelunternehmer Software",
   ],
 
   authors: [{ name: "Cenk Korkmaz", url: "https://korkmaz-it-solutions.com" }],
@@ -53,19 +61,22 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    locale: "en_GB",
+    locale: "de_DE",
+    alternateLocale: "en_GB",
     url: "https://korkmaz-it-solutions.com",
     siteName: "Korkmaz IT Solutions",
-    title: "Korkmaz IT Solutions — Web Development & IT Services",
+    title: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
     description:
-      "Professional web development, IT consulting and digital solutions for businesses. Modern, scalable software built with precision.",
+      "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
+    images: [{ url: "/OG-image-SEO.png", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Korkmaz IT Solutions — Web Development & IT Services",
+    title: "Korkmaz IT Solutions — Freelance Webentwickler & IT-Dienstleister",
     description:
-      "Professional web development, IT consulting and digital solutions for businesses.",
+      "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — direkt mit dem Entwickler.",
+    images: ["/OG-image-SEO.png"],
     creator: "@cenkkorkmaz",
   },
 
@@ -104,6 +115,42 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Korkmaz IT Solutions",
+              url: "https://korkmaz-it-solutions.com",
+              email: "info@korkmaz-it-solutions.com",
+              founder: {
+                "@type": "Person",
+                name: "Cenk Korkmaz",
+                jobTitle: "Freelance Webentwickler & IT-Dienstleister",
+                url: "https://korkmaz-it-solutions.com",
+              },
+              description:
+                "Freelance Webentwickler & IT-Dienstleister aus Deutschland. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
+              areaServed: {
+                "@type": "Country",
+                name: "Germany",
+              },
+              serviceType: [
+                "Webentwicklung",
+                "Web App Entwicklung",
+                "IT-Beratung",
+                "Domain Migration",
+                "E-Mail Migration",
+                "Software Entwicklung",
+              ],
+              knowsLanguage: ["de", "en"],
+              inLanguage: "de",
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${blackOpsOne.variable} antialiased font-sans`}
       >
