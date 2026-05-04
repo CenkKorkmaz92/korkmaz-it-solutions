@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://korkmaz-it-solutions.com"),
 
   title: {
-    default: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
+    default: "Korkmaz IT Solutions — Webentwickler Rems-Murr-Kreis & Region Stuttgart",
     template: "%s | Korkmaz IT Solutions",
   },
 
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     alternateLocale: "en_GB",
     url: "https://korkmaz-it-solutions.com",
     siteName: "Korkmaz IT Solutions",
-    title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
+    title: "Korkmaz IT Solutions — Webentwickler Rems-Murr-Kreis & Region Stuttgart",
     description:
       "Freelance Webentwickler & IT-Dienstleister aus dem Rems-Murr-Kreis — Sulzbach an der Murr, Stuttgart, Esslingen, Nürtingen, Backnang. Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup.",
     images: [{ url: "/OG-image-SEO.jpg", width: 1200, height: 630, alt: "Korkmaz IT Solutions" }],
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Freelance Webentwickler Rems-Murr-Kreis & Region Stuttgart — Korkmaz IT Solutions",
+    title: "Korkmaz IT Solutions — Webentwickler Rems-Murr-Kreis & Region Stuttgart",
     description:
       "Individuelle Websites, Web-Apps, Domain-Migrationen und E-Mail-Setup — Rems-Murr-Kreis, Stuttgart, Esslingen, Nürtingen, Backnang.",
     images: ["/OG-image-SEO.jpg"],
