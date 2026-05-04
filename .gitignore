@@ -22,6 +22,9 @@ dist/
 .env.*
 !.env.example
 
+# PHP mailer config — filled manually on server, never commit
+public/mail/config.php
+
 # ─── TypeScript ──────────────────────────────────────────────────────────────
 *.tsbuildinfo
 next-env.d.ts
@@ -91,3 +94,6 @@ $RECYCLE.BIN/
 *.pem
 *.key
 *.cert
+
+# ─── Internal / Personal ─────────────────────────────────────────────────────
+DEPENDENCY-POLICY.md

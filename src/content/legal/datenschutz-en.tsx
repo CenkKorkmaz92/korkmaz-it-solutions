@@ -22,9 +22,7 @@ export default function DatenschutzEn() {
           <p>71560 Sulzbach an der Murr</p>
           <p>
             Email:{" "}
-            <a href="mailto:info@korkmaz-it-solutions.com" className="text-accent hover:underline">
-              info@korkmaz-it-solutions.com
-            </a>
+            <span className="text-accent select-all">info@korkmaz-it-solutions.com</span>
           </p>
         </div>
       </section>
@@ -212,9 +210,7 @@ export default function DatenschutzEn() {
         </ul>
         <p className="text-base text-primary/70 leading-relaxed mt-4">
           To exercise your rights, please contact:{" "}
-          <a href="mailto:info@korkmaz-it-solutions.com" className="text-accent hover:underline">
-            info@korkmaz-it-solutions.com
-          </a>
+          <span className="text-accent select-all">info@korkmaz-it-solutions.com</span>
         </p>
         <div className="text-base text-primary/70 leading-relaxed mt-4">
           <p className="font-semibold text-primary mb-2">Competent supervisory authority:</p>

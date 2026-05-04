@@ -93,18 +93,12 @@ export default function Footer() {
               <p className="text-base font-semibold text-secondary">
                 Cenk Korkmaz
               </p>
-              <a
-                href="mailto:info@korkmaz-it-solutions.com"
-                className="text-base text-secondary/50 hover:text-accent transition-colors"
-              >
+              <span className="text-base text-secondary/50 select-all">
                 info@korkmaz-it-solutions.com
-              </a>
-              <a
-                href="tel:+491773613007"
-                className="text-base text-secondary/50 hover:text-accent transition-colors"
-              >
+              </span>
+              <span className="text-base text-secondary/50 select-all">
                 +49 177 3613007
-              </a>
+              </span>
             </div>
             <div className="flex items-center gap-5 pt-1">
               <a

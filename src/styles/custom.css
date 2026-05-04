@@ -16,3 +16,10 @@
    All tokens are defined in app/globals.css inside @theme inline {}.
    Add component-level overrides below.
 ──────────────────────────────────────────────────────────────────────────── */
+
+/* Legal pages sit on a white background — keep the global teal selection
+   highlight but force dark text so it's readable */
+.legal-content ::selection,
+.legal-content::selection {
+  color: var(--color-primary);
+}

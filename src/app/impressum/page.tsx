@@ -22,7 +22,7 @@ export default function ImpressumPage() {
 
       <main className="py-16 sm:py-20 bg-secondary">
         <Container>
-          <article className="max-w-2xl space-y-12">
+          <article className="legal-content max-w-2xl space-y-12">
             <LegalContentSwitch de={<ImpressumDe />} en={<ImpressumEn />} />
           </article>
         </Container>

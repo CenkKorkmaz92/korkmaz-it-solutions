@@ -24,13 +24,11 @@ export default function ImpressumDe() {
         <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>
             <span className="text-primary/50">Telefon:</span>{" "}
-            <a href="tel:+491773613007" className="text-primary/70 hover:text-accent">+49 177 3613007</a>
+            <span className="text-primary/70 select-all">+49 177 3613007</span>
           </p>
           <p>
             <span className="text-primary/50">E-Mail:</span>{" "}
-            <a href="mailto:info@korkmaz-it-solutions.com" className="text-accent hover:underline">
-              info@korkmaz-it-solutions.com
-            </a>
+            <span className="text-primary/70 select-all">info@korkmaz-it-solutions.com</span>
           </p>
         </div>
       </section>
