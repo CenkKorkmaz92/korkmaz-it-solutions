@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     "Webentwickler Frankfurt",
     "Webentwickler Köln",
     "Webentwickler Düsseldorf",
-    "Webentwickler Dörtmund",
+    "Webentwickler Dortmund",
     "Webentwickler Leipzig",
     "Webentwickler Nürnberg",
     "Webentwickler Bremen",
