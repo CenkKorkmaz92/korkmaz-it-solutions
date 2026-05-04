@@ -62,7 +62,7 @@ export default function ImpressumEn() {
           Tax Number
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
-          The tax number will be displayed here upon receipt from the tax office.
+          51248/38610
         </p>
       </section>
 

@@ -52,7 +52,7 @@ export default function ImpressumDe() {
           Steuernummer
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
-          Die Steuernummer wird nach Erhalt vom Finanzamt hier angezeigt.
+          51248/38610
         </p>
       </section>
 
