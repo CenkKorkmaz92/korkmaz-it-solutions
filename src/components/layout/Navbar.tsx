@@ -132,6 +132,12 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   prefetch={false}
+                  onClick={(e) => {
+                    if (link.href === "/" && pathname === "/") {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                   className={`text-base font-medium transition-colors link-underline ${
                     isActive(link.href)
                       ? "text-accent"
@@ -238,7 +244,13 @@ export default function Navbar() {
                         ? "text-accent bg-accent/5"
                         : "text-secondary/80 hover:bg-secondary/10 hover:text-secondary"
                     }`}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => {
+                      setMobileOpen(false);
+                      if (link.href === "/" && pathname === "/") {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
+                    }}
                   >
                     {link.label}
                   </Link>

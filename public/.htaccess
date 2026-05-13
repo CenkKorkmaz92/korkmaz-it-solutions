@@ -1,0 +1,52 @@
+# -------------------------------------------------------
+# Next.js Static Export – Apache-Konfiguration (Dogado)
+# -------------------------------------------------------
+
+Options -MultiViews
+RewriteEngine On
+
+# Trailing Slash entfernen (außer Root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Direkte Dateien und Verzeichnisse immer durchlassen
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Seiten ohne .html-Endung auf .html mappen
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# -------------------------------------------------------
+# Cache-Header
+# -------------------------------------------------------
+
+<IfModule mod_headers.c>
+    # _next/static/ – unveränderliche Hashed Assets: 1 Jahr cachen
+    <FilesMatch "^_next/static/">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML-Dateien: NIEMALS cachen – immer frisch vom Server
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Sonstige statische Assets (Bilder, Fonts, Manifest, …)
+    <FilesMatch "\.(ico|png|jpg|jpeg|webp|gif|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# -------------------------------------------------------
+# Sicherheits-Header
+# -------------------------------------------------------
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
