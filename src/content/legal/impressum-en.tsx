@@ -62,7 +62,7 @@ export default function ImpressumEn() {
           Tax Number
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
-          51248/38610
+          51248/38628
         </p>
       </section>
 
