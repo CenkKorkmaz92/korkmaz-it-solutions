@@ -177,6 +177,10 @@ export const translations = {
         errorTooShort: "Deine Nachricht ist zu kurz (mind. 20 Zeichen).",
         errorRateLimit: "Zu viele Anfragen \u2013 bitte warte kurz.",
         errorServer: "Etwas ist schiefgelaufen. Versuch es nochmal.",
+        dsgvoText: "Ich habe die ",
+        dsgvoLinkText: "Datenschutzerklärung",
+        dsgvoTextEnd: " gelesen und stimme der Verarbeitung meiner Daten zu.",
+        errorDsgvo: "Bitte stimme der Datenschutzerklärung zu.",
       },
     },
     footer: {
@@ -365,6 +369,10 @@ export const translations = {
         errorTooShort: "Your message is too short (min. 20 characters).",
         errorRateLimit: "Too many requests \u2014 please wait a moment.",
         errorServer: "Something went wrong. Please try again.",
+        dsgvoText: "I have read the ",
+        dsgvoLinkText: "Privacy Policy",
+        dsgvoTextEnd: " and consent to the processing of my data.",
+        errorDsgvo: "Please accept the Privacy Policy to continue.",
       },
     },
     footer: {

@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
@@ -14,8 +14,11 @@ export default function ContactCtaSection() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  const [dsgvoAccepted, setDsgvoAccepted] = useState(false);
+  const [dsgvoError, setDsgvoError] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const lastSubmitRef = useRef<number>(0);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -42,6 +45,15 @@ export default function ContactCtaSection() {
       return;
     }
 
+    if (!dsgvoAccepted) {
+      setDsgvoError(true);
+      setErrorMsg(t.contact.form.errorDsgvo);
+      return;
+    }
+    setDsgvoError(false);
+
+    if (Date.now() - lastSubmitRef.current < 5000) return;
+    lastSubmitRef.current = Date.now();
     setStatus("loading");
     try {
       const res = await fetch("/mail/send-mail.php", {
@@ -65,6 +77,7 @@ export default function ContactCtaSection() {
       setEmail("");
       setMessage("");
       setHoneypot("");
+      setDsgvoAccepted(false);
     } catch {
       setStatus("error");
       setErrorMsg(t.contact.form.errorServer);
@@ -167,17 +180,41 @@ export default function ContactCtaSection() {
                     <p className="text-xs text-secondary/30 mt-1 text-right">{message.length}/500</p>
                   </div>
 
-                  {errorMsg && (
-                    <p role="alert" className="text-sm text-red-400">{errorMsg}</p>
-                  )}
+                  {/* DSGVO consent + submit — grouped as one action unit */}
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-start gap-3">
+                      <input
+                        id="contact-dsgvo"
+                        type="checkbox"
+                        checked={dsgvoAccepted}
+                        onChange={(e) => { setDsgvoAccepted(e.target.checked); if (e.target.checked) setDsgvoError(false); }}
+                        className={`mt-1 h-4 w-4 shrink-0 rounded cursor-pointer accent-accent transition-colors ${
+                          dsgvoError
+                            ? "border-2 border-red-400 bg-red-400/10"
+                            : "border border-accent/30 bg-white/5"
+                        }`}
+                      />
+                      <label htmlFor="contact-dsgvo" className="text-sm text-secondary/50 leading-relaxed cursor-pointer">
+                        {t.contact.form.dsgvoText}
+                        <a href="/datenschutz" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
+                          {t.contact.form.dsgvoLinkText}
+                        </a>
+                        {t.contact.form.dsgvoTextEnd}
+                      </label>
+                    </div>
 
-                  <button
-                    type="submit"
-                    disabled={status === "loading"}
-                    className="btn-cyber inline-flex items-center justify-center rounded-md bg-accent px-6 py-3.5 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] transition-all duration-150 disabled:opacity-60 disabled:pointer-events-none"
-                  >
-                    {status === "loading" ? t.contact.form.sending : t.contact.cta1}
-                  </button>
+                    {errorMsg && (
+                      <p role="alert" className="text-sm text-red-400">{errorMsg}</p>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={status === "loading"}
+                      className="btn-cyber inline-flex items-center justify-center rounded-md bg-accent px-6 py-3.5 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] transition-all duration-150 disabled:opacity-60 disabled:pointer-events-none select-none"
+                    >
+                      {status === "loading" ? t.contact.form.sending : t.contact.cta1}
+                    </button>
+                  </div>
                 </form>
               )}
             </div>
