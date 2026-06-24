@@ -3,13 +3,14 @@ import Placeholder from "@/components/legal/Placeholder";
 export default function ImpressumDe() {
   return (
     <>
-      {/* Angaben gemäß § 5 TMG */}
+      {/* Angaben gemäß § 5 DDG */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          Angaben gemäß § 5 TMG
+          Angaben gemäß § 5 DDG
         </h2>
         <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>Cenk Korkmaz</p>
+          <p>Korkmaz IT Solutions</p>
           <p>Kleinhöchbergerstraße 45</p>
           <p>71560 Sulzbach an der Murr</p>
           <p>Deutschland</p>
@@ -33,29 +34,6 @@ export default function ImpressumDe() {
         </div>
       </section>
 
-      {/* Berufsrechtliche Regelungen */}
-      <section>
-        <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          Berufsrechtliche Regelungen
-        </h2>
-        <div className="text-base text-primary/70 leading-relaxed space-y-2">
-          <p>
-            <span className="text-primary/50">Berufsbezeichnung:</span>{" "}
-            Freiberuflicher Softwareentwickler
-          </p>
-        </div>
-      </section>
-
-      {/* Steuernummer */}
-      <section>
-        <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          Steuernummer
-        </h2>
-        <p className="text-base text-primary/70 leading-relaxed">
-          51248/38628
-        </p>
-      </section>
-
       {/* Verantwortlich für Inhalt */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
@@ -63,6 +41,7 @@ export default function ImpressumDe() {
         </h2>
         <div className="text-base text-primary/70 leading-relaxed space-y-2">
           <p>Cenk Korkmaz</p>
+          <p>Korkmaz IT Solutions</p>
           <p>Kleinhöchbergerstraße 45</p>
           <p>71560 Sulzbach an der Murr</p>
         </div>
@@ -77,8 +56,8 @@ export default function ImpressumDe() {
           <div>
             <h3 className="text-base font-semibold text-primary mb-2">Haftung für Inhalte</h3>
             <p className="text-base text-primary/70 leading-relaxed">
-              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen
-              Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+              Als Diensteanbieter bin ich gemäß § 1 Abs. 1 DDG für eigene Inhalte auf diesen
+              Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 4 bis 7 DDG bin ich
               als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
               Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
               rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
@@ -88,11 +67,11 @@ export default function ImpressumDe() {
           <div>
             <h3 className="text-base font-semibold text-primary mb-2">Haftung für Links</h3>
             <p className="text-base text-primary/70 leading-relaxed">
-              Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
-              keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr
+              Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich
+              keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr
               übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
               oder Betreiber der Seiten verantwortlich. Bei Bekanntwerden von Rechtsverletzungen
-              werden wir derartige Links umgehend entfernen.
+              werde ich derartige Links umgehend entfernen.
             </p>
           </div>
         </div>
@@ -104,10 +83,10 @@ export default function ImpressumDe() {
           Urheberrecht
         </h2>
         <p className="text-base text-primary/70 leading-relaxed">
-          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+          Die durch den Betreiber dieser Seite erstellten Inhalte und Werke unterliegen
           dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
           der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
-          Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind
+          Zustimmung des Betreibers. Downloads und Kopien dieser Seite sind
           nur für den privaten, nicht kommerziellen Gebrauch gestattet.
         </p>
       </section>

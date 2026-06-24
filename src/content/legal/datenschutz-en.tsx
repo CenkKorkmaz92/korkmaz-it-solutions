@@ -68,18 +68,26 @@ export default function DatenschutzEn() {
         </div>
       </section>
 
-      {/* 4. Contact by email */}
+      {/* 4. Contact */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          4. Contact by Email
+          4. Contact
         </h2>
-        <p className="text-base text-primary/70 leading-relaxed">
-          If you contact us by email, the data you provide (your email address and the content
-          of your message) will be stored to process your enquiry. We will not pass this data on
-          without your consent. Processing is based on Art. 6(1)(b) GDPR if your enquiry is
-          related to the performance of a contract, or on Art. 6(1)(f) GDPR based on our
-          legitimate interest in effectively handling enquiries directed to us.
-        </p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-3">
+          <p>
+            If you contact us by email, the data you provide (your email address and the content
+            of your message) will be stored to process your enquiry. We will not pass this data on
+            without your consent. Processing is based on Art. 6(1)(b) GDPR if your enquiry is
+            related to the performance of a contract, or on Art. 6(1)(f) GDPR based on our
+            legitimate interest in effectively handling enquiries directed to us.
+          </p>
+          <p>
+            Alternatively, you may submit an enquiry using the contact form on this website. The
+            data you enter (name, email address, message) is transmitted to the web server via an
+            encrypted HTTPS connection and then forwarded to the operator by email. Form data is
+            not stored on the server. The same legal basis applies as for direct email contact.
+          </p>
+        </div>
       </section>
 
       {/* 5. Processing of customer data in the context of projects */}
@@ -139,6 +147,14 @@ export default function DatenschutzEn() {
           This website does not use tracking cookies, web analytics services (e.g. Google
           Analytics), or cookie consent tools (e.g. Cookiebot). Only technically necessary
           cookies required for the operation of the website are used.
+        </p>
+        <p className="text-base text-primary/70 leading-relaxed mt-3">
+          In addition, a single value is stored in the browser's local storage (localStorage):
+          the key <code className="text-accent">preferred-lang</code> with the value{" "}
+          <code className="text-accent">de</code> or{" "}
+          <code className="text-accent">en</code>, to remember your chosen language preference
+          for future visits. This value contains no personal data and is not transmitted to any
+          third party.
         </p>
       </section>
 
@@ -237,7 +253,7 @@ export default function DatenschutzEn() {
           at all times.
         </p>
         <p className="text-base text-primary/50 mt-3">
-          Last updated: March 2026
+          Last updated: June 2026
         </p>
       </section>
     </>

@@ -58,20 +58,30 @@ export default function DatenschutzDe() {
         </div>
       </section>
 
-      {/* 4. Kontaktaufnahme per E-Mail */}
+      {/* 4. Kontaktaufnahme */}
       <section>
         <h2 className="text-base font-semibold text-primary mb-4 pb-2 border-b border-primary/10">
-          4. Kontaktaufnahme per E-Mail
+          4. Kontaktaufnahme
         </h2>
-        <p className="text-base text-primary/70 leading-relaxed">
-          Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten (Ihre
-          E-Mail-Adresse sowie der Inhalt Ihrer Nachricht) bei uns gespeichert, um Ihre Anfrage
-          zu bearbeiten. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die
-          Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage
-          mit der Erfüllung eines Vertrags zusammenhängt, oder auf Grundlage von Art. 6 Abs. 1
-          lit. f DSGVO aufgrund unseres berechtigten Interesses an der effektiven Bearbeitung der
-          an uns gerichteten Anfragen.
-        </p>
+        <div className="text-base text-primary/70 leading-relaxed space-y-3">
+          <p>
+            Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten (Ihre
+            E-Mail-Adresse sowie der Inhalt Ihrer Nachricht) bei uns gespeichert, um Ihre Anfrage
+            zu bearbeiten. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Die
+            Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage
+            mit der Erfüllung eines Vertrags zusammenhängt, oder auf Grundlage von Art. 6 Abs. 1
+            lit. f DSGVO aufgrund unseres berechtigten Interesses an der effektiven Bearbeitung der
+            an uns gerichteten Anfragen.
+          </p>
+          <p>
+            Alternativ können Sie über das Kontaktformular auf dieser Website eine Anfrage senden.
+            Die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse, Nachricht) werden per
+            verschlüsselter HTTPS-Verbindung an den Webserver übertragen und anschließend per
+            E-Mail an den Betreiber weitergeleitet. Eine Speicherung der Formulardaten auf dem
+            Server findet nicht statt. Es gilt dieselbe Rechtsgrundlage wie bei der direkten
+            E-Mail-Kontaktaufnahme.
+          </p>
+        </div>
       </section>
 
       {/* 5. Verarbeitung von Kundendaten im Rahmen von Projekten */}
@@ -134,6 +144,14 @@ export default function DatenschutzDe() {
           (z. B. Google Analytics) und keine Cookie-Consent-Tools (z. B. Cookiebot).
           Es werden ausschließlich technisch notwendige Cookies verwendet, die für den
           Betrieb der Website erforderlich sind.
+        </p>
+        <p className="text-base text-primary/70 leading-relaxed mt-3">
+          Zusätzlich wird im lokalen Speicher des Browsers (localStorage) ein einzelner Wert
+          gespeichert: der Schlüssel <code className="text-accent">preferred-lang</code> mit dem
+          Wert <code className="text-accent">de</code> oder{" "}
+          <code className="text-accent">en</code>, um Ihre gewählte Sprachpräferenz für künftige
+          Besuche zu merken. Dieser Wert enthält keine personenbezogenen Daten und wird nicht an
+          Dritte übertragen.
         </p>
       </section>
 
@@ -232,7 +250,7 @@ export default function DatenschutzDe() {
           Leistungen umzusetzen. Es gilt die jeweils aktuelle Fassung.
         </p>
         <p className="text-base text-primary/50 mt-3">
-          Stand: März 2026
+          Stand: Juni 2026
         </p>
       </section>
     </>
