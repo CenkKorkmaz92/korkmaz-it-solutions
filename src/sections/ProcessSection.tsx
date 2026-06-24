@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Container from "@/components/layout/Container";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -72,6 +73,20 @@ export default function ProcessSection() {
               </li>
             ))}
           </ol>
+
+          {/* CTA after process steps */}
+          <div className="mt-20 sm:mt-24 pt-12 border-t border-accent/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+            <p className="text-base text-secondary/60 max-w-lg leading-relaxed">
+              {t.process.cta.text}
+            </p>
+            <Link
+              href="/#contact"
+              prefetch={false}
+              className="btn-cyber inline-flex w-full items-center justify-center rounded-md bg-accent px-8 py-4 text-base font-semibold text-primary hover:bg-accent/90 hover:-translate-y-px active:scale-[0.98] transition-all duration-150 sm:w-auto flex-shrink-0"
+            >
+              {t.process.cta.button}
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

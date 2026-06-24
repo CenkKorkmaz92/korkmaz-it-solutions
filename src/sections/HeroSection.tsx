@@ -6,17 +6,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 import { useReveal } from "@/hooks/useReveal";
 import CyberChip from "@/components/ui/CyberChip";
 
-/** Tech stack badges shown in the hero section. */
-const techStack = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Node.js",
-  "Tailwind CSS",
-  "PostgreSQL",
-];
-
-/** Full-viewport hero section with headline, CTA buttons, and tech stack badges. */
+/** Full-viewport hero section with headline and CTA buttons. */
 export default function HeroSection() {
   const t = useTranslation();
   const ref = useReveal(0.05);
@@ -59,7 +49,9 @@ export default function HeroSection() {
 
           {/* Supporting copy */}
           <p className="mt-6 max-w-xl text-base sm:text-lg text-secondary/60 leading-relaxed">
-            {t.hero.sub}
+            {t.hero.sub.split("\n").map((line, i) =>
+              i === 0 ? <span key={i}>{line}<br /></span> : <strong key={i} className="text-secondary/80 font-semibold">{line}</strong>
+            )}
           </p>
 
           {/* CTA buttons */}
@@ -80,22 +72,6 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Tech stack bar */}
-          <div className="mt-12 sm:mt-16 pt-8 border-t border-accent/10">
-            <p className="text-base uppercase tracking-widest text-secondary/30 mb-4">
-              {t.hero.techLabel}
-            </p>
-            <ul className="flex flex-wrap gap-3" aria-label="Tech stack">
-              {techStack.map((tech) => (
-                <li
-                  key={tech}
-                  className="cyber-bracket rounded-sm border border-accent/15 bg-accent/5 px-4 py-1.5 text-base font-medium text-accent/70 hover:border-accent/50 hover:text-accent hover:bg-accent/10 hover:shadow-[0_0_10px_rgba(0,212,255,0.15)] transition-all duration-150 cursor-default"
-                >
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </Container>
     </section>

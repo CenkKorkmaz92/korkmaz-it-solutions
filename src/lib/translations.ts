@@ -16,10 +16,10 @@ export const translations = {
       cta: "Kontakt aufnehmen",
     },
     hero: {
-      eyebrow: "Webentwicklung & IT",
+      eyebrow: "Für Selbstständige, Unternehmen & lokale Betriebe",
       headline: "Websites und Web-Apps",
       headlineAccent: "die Ergebnisse bringen.",
-      sub: "Ich baue schnelle, saubere Websites und Web-Apps für Selbstständige und Unternehmen in ganz Deutschland — remote, direkt, ohne Umwege.",
+      sub: "Direkt mit dem Entwickler.\nKeine Agentur. Keine Umwege.",
       cta1: "Kontakt aufnehmen",
       cta2: "Projekte ansehen",
       techLabel: "Damit arbeite ich",
@@ -32,32 +32,32 @@ export const translations = {
         {
           title: "Webentwicklung",
           description:
-            "Landing Pages, Unternehmenswebsites und Web-Apps mit React, Next.js und TypeScript — schnell, mobiloptimiert und direkt auf dein Business zugeschnitten.",
+            "Du brauchst eine Website die Kunden überzeugt, auf dem Handy funktioniert und zu deinem Betrieb passt — keine Template-Lösung vom Reißbrett. Ich entwickle sie direkt auf dein Geschäft zugeschnitten.",
         },
         {
           title: "Performance & SEO",
           description:
-            "Core Web Vitals, Ladezeit-Optimierung, strukturierte Daten und technisches SEO — damit deine Website bei Google sichtbar ist und Besucher nicht abspringen.",
+            "Deine Website wird bei Google gefunden — und wenn jemand draufklickt, bleibt er auch. Ich sorge dafür, dass sie schnell lädt, auf allen Geräten funktioniert und in den Suchergebnissen sichtbar ist.",
         },
         {
           title: "Automatisierung",
           description:
-            "Kontaktformulare, Buchungsprozesse, API-Anbindungen und interne Tools — repetitive Abläufe automatisiert, damit du dich aufs Wesentliche konzentrieren kannst.",
+            "Anfragen, Terminbuchungen, Benachrichtigungen — ich automatisiere die Abläufe, die du gerade noch von Hand erledigst. Du gewinnst Zeit, ohne dass etwas verloren geht.",
         },
         {
           title: "Beratung",
           description:
-            "Technologie-Auswahl, Projektplanung und ehrliche Einschätzung — ich sage dir, was für dein Vorhaben wirklich sinnvoll ist, bevor du investierst.",
+            "Bevor du Geld ausgibst, reden wir. Ich sage dir ehrlich, was dein Vorhaben braucht — und was nicht. Keine Paketpreise, keine Upsells.",
         },
         {
           title: "Domain & Hosting",
           description:
-            "Domain-Wechsel, DNS-Setup, SSL-Zertifikate und Hosting-Konfiguration — ich richte alles ein, damit deine Website zuverlässig erreichbar ist.",
+            "Deine Website soll einfach laufen — ohne Ausfälle, ohne Sicherheitslücken, ohne dass du dich damit beschäftigen musst. Domain, Hosting und alles Technische dahinter: das ist mein Job.",
         },
         {
           title: "E-Mail Migration",
           description:
-            "Umzug von Postfächern zu Google Workspace, Microsoft 365 oder anderen Anbietern — inklusive DNS-Einrichtung, ohne Datenverlust und mit minimalem Ausfall.",
+            "Du willst professionelle E-Mail-Adressen mit deiner eigenen Domain — oder wechselst zu einem neuen Anbieter. Ich kümmere mich um den Umzug: kein Datenverlust, keine Unterbrechung, du musst nichts wissen.",
         },
       ],
     },
@@ -108,11 +108,11 @@ export const translations = {
     about: {
       eyebrow: "Über mich",
       heading: "Die Person hinter der Arbeit",
-      para1: "Hi, ich bin Cenk. Ich entwickle moderne Websites und Web-Apps mit Fokus auf Performance, Klarheit und echte Ergebnisse. Kein Agentur-Overhead, kein unnötiger Prozess – du arbeitest direkt mit mir. Von der Idee bis zum Livegang.",
-      para2: "",
-      para3: "",
-      para4: "",
-      para5: "",
+      para1: "Ich bin Cenk — Freelance Webentwickler aus Sulzbach an der Murr im Rems-Murr-Kreis. Ich baue Websites und Web-Apps für Selbstständige, Handwerker und kleine Unternehmen, die online ernst genommen werden wollen.",
+      para2: "Bei mir arbeitest du direkt mit dem Entwickler. Keine Agentur die deine Anforderungen intern weitergibt, kein Projektmanager als Zwischenschicht. Du erreichst mich direkt — und bekommst eine ehrliche Antwort, nicht eine Verkaufspräsentation.",
+      para3: "Ich arbeite vollständig remote und bin für Unternehmen in ganz Deutschland tätig. Das Ergebnis ist dasselbe wie vor Ort — aber ohne Anfahrt, ohne Wartezeit und ohne regionale Einschränkung.",
+      para4: "Zu meinen Projekten gehören Websites für ein Tattoo-Studio, ein Schmuck-Label, Freelancer und Einzelunternehmer — sowie eine lokale Buchhaltungssoftware speziell für Selbstständige in Deutschland. Jedes Projekt hat ein klares Ziel, und das setze ich um.",
+      para5: "Mein Maßstab ist nicht der technisch aufwendigste Stack. Mein Maßstab ist, ob deine Website das tut, wofür sie gebaut wurde.",
       values: [
         {
           label: "Frontend bis Backend",
@@ -154,8 +154,10 @@ export const translations = {
           description:
             "Du bekommst das fertige Projekt – deployed, getestet, erklärt. Der Code gehört dir, und du verstehst was er macht.",
         },
-      ],
-    },
+      ],      cta: {
+        text: "Klingt nach dem, was du brauchst? Das erste Gespräch ist kostenlos.",
+        button: "Jetzt anfragen",
+      },    },
     contact: {
       eyebrow: "Kontakt",
       heading: "Lass uns dein Projekt umsetzen",
@@ -208,10 +210,10 @@ export const translations = {
       cta: "Get in Touch",
     },
     hero: {
-      eyebrow: "Freelance Web Developer",
-      headline: "No middleman.",
-      headlineAccent: "You talk to the developer.",
-      sub: "I build fast, clean websites and web apps for freelancers and businesses across Germany — remote, no middleman, no agency overhead.",
+      eyebrow: "For Freelancers, Businesses & Local Companies",
+      headline: "Websites & Web Apps",
+      headlineAccent: "that deliver results.",
+      sub: "Work directly with the developer.\nNo agency. No unnecessary layers.",
       cta1: "Get in Touch",
       cta2: "View Projects",
       techLabel: "What I work with",
@@ -224,32 +226,32 @@ export const translations = {
         {
           title: "Web Development",
           description:
-            "Landing pages, business websites and web apps built with React, Next.js and TypeScript — fast, mobile-optimised and tailored to your business.",
+            "You need a website that convinces customers, works on mobile and actually fits your business — not an off-the-shelf template. I build it tailored directly to what you do.",
         },
         {
           title: "Performance & SEO",
           description:
-            "Core Web Vitals, load time optimisation, structured data and technical SEO — so your site ranks on Google and keeps visitors engaged.",
+            "Your website gets found on Google — and when someone clicks, they stay. I make sure it loads fast, works on all devices and shows up in search results.",
         },
         {
           title: "Automation",
           description:
-            "Contact forms, booking flows, API integrations and internal tools — repetitive tasks automated so you can focus on what matters.",
+            "Enquiries, bookings, notifications — I automate the tasks you're currently doing by hand. You save time without anything slipping through.",
         },
         {
           title: "Consulting",
           description:
-            "Tech stack selection, project scoping and honest assessment — I tell you what actually makes sense for your project before you commit.",
+            "Before you spend money, we talk. I give you an honest assessment of what your project actually needs — and what it doesn't. No bundled packages, no upsells.",
         },
         {
           title: "Domain & Hosting",
           description:
-            "Domain transfers, DNS setup, SSL certificates and hosting configuration — I get everything running so your site stays reliably online.",
+            "Your website should just work — no outages, no security gaps, no need to think about it. Domain, hosting and everything technical: that's my job.",
         },
         {
           title: "Email Migration",
           description:
-            "Moving mailboxes to Google Workspace, Microsoft 365 or other providers — including DNS setup, no data loss and minimal downtime.",
+            "You want professional email addresses with your own domain — or you're switching providers. I handle the migration: no data loss, no interruption, no technical knowledge required.",
         },
       ],
     },
@@ -300,11 +302,11 @@ export const translations = {
     about: {
       eyebrow: "About",
       heading: "The Person Behind the Work",
-      para1: "Hi, I'm Cenk. I build modern websites and web apps with a focus on performance, clarity and real results. No agency overhead, no unnecessary process — you work directly with me. From idea to go-live.",
-      para2: "",
-      para3: "",
-      para4: "",
-      para5: "",
+      para1: "I'm Cenk — freelance web developer from Sulzbach an der Murr in the Rems-Murr district. I build websites and web apps for freelancers, tradespeople and small businesses who want to be taken seriously online.",
+      para2: "With me, you work directly with the developer — no agency passing your brief along internally, no project manager in between. You reach me directly and get an honest answer, not a sales pitch.",
+      para3: "I work fully remote and take on projects from businesses across Germany. The result is the same as working on-site — without the travel, the delays or the geographic limitations.",
+      para4: "My projects include websites for a tattoo studio, a jewellery label, freelancers and sole traders — as well as a local accounting app built specifically for self-employed people in Germany. Every project has a clear goal, and I deliver it.",
+      para5: "My benchmark isn't the most technically impressive stack. My benchmark is whether your website does what it was built to do.",
       values: [
         {
           label: "Frontend to backend",
@@ -347,6 +349,10 @@ export const translations = {
             "You get the finished project — deployed, tested, explained. The code is yours and you understand what it does.",
         },
       ],
+      cta: {
+        text: "Sounds like what you need? The first call is free.",
+        button: "Get in touch",
+      },
     },
     contact: {
       eyebrow: "Contact",
